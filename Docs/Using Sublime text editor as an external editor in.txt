@@ -1,0 +1,4 @@
+Using Sublime text editor as an external editor in eaglecad use the following including quotes and "%F" for file opening.
+
+
+"/Applications/Sublime Text.app" "%F"

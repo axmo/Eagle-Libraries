@@ -1,0 +1,14 @@
+.:
+ArduinoNano
+E14_Arduino_revC.lbr
+arduino.lbr
+arduino2009.scr
+arduino_due_shield.lbr
+arduino_jw.lbr
+arduinopromini.lbr
+arduninolist.txt
+mega-arduino.scr
+
+./ArduinoNano:
+ArduinoNanoV30.lbr
+DESCRIPTION
