@@ -37,5 +37,21 @@ the location and choose `Yes` to create the directory.
 
 ## Some useful library locations
 
-http://edge.rit.edu/edge/P16250/public/Electrical/Eagle%20Libraries/Element14
+[edge.rit.edu](http://edge.rit.edu/edge/P16250/public/Electrical/Eagle%20Libraries/Element14)
+
+[www.element14.com](https://www.element14.com/community/community/cadsoft_eagle/blog/2015/01/15/the-10-most-popular-cadsoft-eagle-libraries)
+
+[sparkfun](https://github.com/sparkfun/SparkFun-Eagle-Libraries)
+
+[www.element14.com/community](https://www.element14.com/community/community/cadsoft_eagle/eagle_cad_libraries/content?filterID=contentstatus%5Bpublished%5D~objecttype~objecttype%5Bdocument%5D&filterID=contentstatus%5Bpublished%5D~language~language%5Bcpl%5D)
+
+## User Language Programs (ULP)
+
+[element14](https://www.element14.com/community/community/cadsoft_eagle/blog/2015/01/19/eagle-ulps-every-user-should-know)
+
+
+## Useful tips
+
+[www.elecrom.com](http://www.elecrom.com/eagle-library-list-of-most-commonly-used-electronics-components/)
+
 
