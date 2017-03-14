@@ -37,23 +37,19 @@ the location and choose `Yes` to create the directory.
 
 ## Some useful library locations
 
-[edge.rit.edu](http://edge.rit.edu/edge/P16250/public/Electrical/Eagle%20Libraries/Element14)
-
-[www.element14.com](https://www.element14.com/community/community/cadsoft_eagle/blog/2015/01/15/the-10-most-popular-cadsoft-eagle-libraries)
-
-[sparkfun](https://github.com/sparkfun/SparkFun-Eagle-Libraries)
-
-[www.element14.com/community](https://www.element14.com/community/community/cadsoft_eagle/eagle_cad_libraries?ICID=cadsoft-main-sidenav)
-
-[element-14-all-cad-files](https://www.element14.com/community/thread/36914/l/element-14-all-cad-files)
+* [edge.rit.edu](http://edge.rit.edu/edge/P16250/public/Electrical/Eagle%20Libraries/Element14)
+* [www.element14.com](https://www.element14.com/community/community/cadsoft_eagle/blog/2015/01/15/the-10-most-popular-cadsoft-eagle-libraries)
+* [sparkfun](https://github.com/sparkfun/SparkFun-Eagle-Libraries)
+* [www.element14.com/community](https://www.element14.com/community/community/cadsoft_eagle/eagle_cad_libraries?ICID=cadsoft-main-sidenav)
+* [element-14-all-cad-files](https://www.element14.com/community/thread/36914/l/element-14-all-cad-files)
 
 ## User Language Programs (ULP)
 
-[element14](https://www.element14.com/community/community/cadsoft_eagle/blog/2015/01/19/eagle-ulps-every-user-should-know)
+* [element14](https://www.element14.com/community/community/cadsoft_eagle/blog/2015/01/19/eagle-ulps-every-user-should-know)
 
 
 ## Useful tips
 
-[www.elecrom.com](http://www.elecrom.com/eagle-library-list-of-most-commonly-used-electronics-components/)
+* [www.elecrom.com](http://www.elecrom.com/eagle-library-list-of-most-commonly-used-electronics-components/)
 
 
