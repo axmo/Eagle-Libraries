@@ -243,6 +243,41 @@ added:
         raspberrypi_bastelstube.lbr
         raspberrypi_cm.lbr
 
+    SparkFun:
+        LilyPad-Wearables.lbr
+        SparkFun-Aesthetics.lbr
+        SparkFun-Batteries.lbr
+        SparkFun-Boards.lbr
+        SparkFun-Capacitors.lbr
+        SparkFun-Clocks.lbr
+        SparkFun-Coils.lbr
+        SparkFun-Connectors.lbr
+        SparkFun-DiscreteSemi.lbr
+        SparkFun-Displays.lbr
+        SparkFun-Electromechanical.lbr
+        SparkFun-Fuses.lbr
+        SparkFun-GPS.lbr
+        SparkFun-Hardware.lbr
+        SparkFun-IC-Amplifiers.lbr
+        SparkFun-IC-Comms.lbr
+        SparkFun-IC-Conversion.lbr
+        SparkFun-IC-Logic.lbr
+        SparkFun-IC-Memory.lbr
+        SparkFun-IC-Microcontroller.lbr
+        SparkFun-IC-Power.lbr
+        SparkFun-IC-Special-Function.lbr
+        SparkFun-Jumpers.lbr
+        SparkFun-LED.lbr
+        SparkFun-PowerSymbols.lbr
+        SparkFun-RF.lbr
+        SparkFun-Resistors.lbr
+        SparkFun-Retired.lbr
+        SparkFun-Sensors.lbr
+        SparkFun-Switches.lbr
+        User-Submitted.lbr
+        images
+        readme.md
+
 
 
 
