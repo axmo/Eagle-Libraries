@@ -52,4 +52,6 @@ the location and choose `Yes` to create the directory.
 
 * [www.elecrom.com](http://www.elecrom.com/eagle-library-list-of-most-commonly-used-electronics-components/)
 
+[clean-up-the-parts-list](https://www.baldengineer.com/eagle-clean-up-the-parts-list-by-disabling-libraries.html)
+
 
