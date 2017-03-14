@@ -1,0 +1,9 @@
+Serial
+.:
+1wire.lbr
+DESCRIPTION
+i2c.lbr
+i2c_95xx.lbr
+sipex.lbr
+sir-tfdu4100_tfds4500_tfdt4500.lbr
+st232_gaui.lbr
