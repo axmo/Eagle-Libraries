@@ -45,6 +45,8 @@ the location and choose `Yes` to create the directory.
 
 [www.element14.com/community](https://www.element14.com/community/community/cadsoft_eagle/eagle_cad_libraries?ICID=cadsoft-main-sidenav)
 
+[element-14-all-cad-files](https://www.element14.com/community/thread/36914/l/element-14-all-cad-files)
+
 ## User Language Programs (ULP)
 
 [element14](https://www.element14.com/community/community/cadsoft_eagle/blog/2015/01/19/eagle-ulps-every-user-should-know)
