@@ -35,7 +35,7 @@ the location and choose `Yes` to create the directory.
    new `external_lbrs` folder.
 7. Restart Eagle. The library should be now be usable. 
 
-## Some usefu library locations
+## Some useful library locations
 
 http://edge.rit.edu/edge/P16250/public/Electrical/Eagle%20Libraries/Element14
 
