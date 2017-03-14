@@ -43,7 +43,7 @@ the location and choose `Yes` to create the directory.
 
 [sparkfun](https://github.com/sparkfun/SparkFun-Eagle-Libraries)
 
-[www.element14.com/community](https://www.element14.com/community/community/cadsoft_eagle/eagle_cad_libraries/content?filterID=contentstatus%5Bpublished%5D~objecttype~objecttype%5Bdocument%5D&filterID=contentstatus%5Bpublished%5D~language~language%5Bcpl%5D)
+[www.element14.com/community](https://www.element14.com/community/community/cadsoft_eagle/eagle_cad_libraries?ICID=cadsoft-main-sidenav)
 
 ## User Language Programs (ULP)
 
