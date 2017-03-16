@@ -1,5 +1,10 @@
 ﻿EAGLE Library ChangeLog
 =======================
+2017-03-16
+Removed:
+    lbr-depreciated (not compatable with AUTODESK Eagle Cad v8.10)
+    Vacumn tubes/valves2.lbr (not compatable with AUTODESK Eagle Cad v8.10)
+
 2017-03-14
 added: 
     Adafruit

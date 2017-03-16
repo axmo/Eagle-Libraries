@@ -2,7 +2,7 @@
 
 Taken from various sources and some that i have created
 
-##Instructions for installation from Adafruit
+## Instructions for installation from Adafruit
 
 ================================
 
@@ -34,6 +34,9 @@ the location and choose `Yes` to create the directory.
 6. Find and open the `external_lbrs` folder. Unzip and drag `adafruit.lbr` into the 
    new `external_lbrs` folder.
 7. Restart Eagle. The library should be now be usable. 
+
+### Changes
+Refer to the changelog.txt 
 
 ## Some useful library locations
 

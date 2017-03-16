@@ -1,5 +1,4 @@
-external_lbrs
-.:
+Eagle-Libraries
 ADC-DAC
 Adafruit
 Amplifiers
@@ -55,7 +54,7 @@ Voltage Converters
 Voltage Regulators
 Wireless
 bmp.scr
-lbr-depricated
+libscripts
 pacav69librarylist.txt
 
 ./ADC-DAC:
@@ -98,6 +97,7 @@ ua_ua_lm710.lbr
 zigbit.lbr
 
 ./Arduino:
+ArduinoNano
 ArduinoNanoV30 readme.txt
 ArduinoNanoV30.lbr
 DESCRIPTION
@@ -109,6 +109,10 @@ arduino_jw.lbr
 arduinopromini.lbr
 arduninolist.txt
 mega-arduino.scr
+
+./Arduino/ArduinoNano:
+ArduinoNanoV30.lbr
+DESCRIPTION
 
 ./Atmel:
 Atmel_By_element14_Batch_1-00.lbr
@@ -388,6 +392,7 @@ Silicon_Storage_Tech_By_element14_Batch_1.lbr
 Sipex_By_element14_Batch_1.lbr
 Spansion_By_element14_Batch_1.lbr
 Susumo_By_element14_Batch_1.lbr
+TI_MSP430_v16.lbr
 Taiwan_Semiconductor_By_element14_Batch_1.lbr
 Taiyo_By_element14_Batch_1.lbr
 Texas Instruments_By_element14_Batch_1.lbr
@@ -877,6 +882,7 @@ basic_stamps.lbr
 parallax_propeller.lbr
 
 ./Processors/Texas Instruments:
+TI_MSP430_v16.lbr
 msp430-1.lbr
 
 ./Processors/Xilinx:
@@ -1296,7 +1302,6 @@ DESCRIPTION
 nixie_tube.lbr
 russian-nixies.lbr
 tubes.lbr
-valves2.lbr
 
 ./Vendors:
 DESCRIPTION
@@ -1427,129 +1432,5 @@ sena_technology-bluetooth.lbr
 telecontrolli.lbr
 xbee_r1.lbr
 
-./lbr-depricated:
-65xxx.lbr
-DESCRIPTION
-ad.lbr
-amd_taxi.lbr
-analog-devices-dds.lbr
-analog_device_adxl202e.lbr
-atmel89cxxxx.lbr
-avr.lbr
-basicstamp2.lbr
-basicx.lbr
-bx_24.lbr
-californiamicro.lbr
-calmicro.lbr
-cap-pan.lbr
-coldfire.lbr
-con-cuistack.lbr
-con-fujitsu-pcmcia.lbr
-con-phoenix-381_l.lbr
-con-ptr500+.lbr
-con-riacon.lbr
-con-subd.lbr
-con-yamaichi-cf.lbr
-con-yamaichi.lbr
-divers.lbr
-ep_molex_6410_7395-02.lbr
-fetky.lbr
-ftdi2.lbr
-ftdi3.lbr
-ftdi4.lbr
-gpsms1.lbr
-hacesoft.lbr
-hdsp.lbr
-hirose.lbr
-hirose2.lbr
-honda2-0.lbr
-hopf.lbr
-ic-bbd.lbr
-inductor-toko.lbr
-intel-strongarm.lbr
-interface.lbr
-intersil.lbr
-ite-it81xx.lbr
-jensen.lbr
-jfw-pwm1.lbr
-jst-ph.lbr
-jst_eph.lbr
-lattice.lbr
-lcd_parallel.lbr
-linear-technology.lbr
-linkup-l1110.lbr
-little-logic.lbr
-lm2937.lbr
-lmd1820x.lbr
-lpc210x.lbr
-lucorca.lbr
-lvds.lbr
-max1480-90.lbr
-max498.lbr
-maxim1719-21.lbr
-mc33269.lbr
-mc3479p.lbr
-mc68ez328.lbr
-micro-rabbit.lbr
-microchip.lbr
-microchip_can.lbr
-microchip_mcp2120.lbr
-mini_din.lbr
-minicir.lbr
-minipci.lbr
-mitel.lbr
-motorola_hc08.lbr
-mpc8250.lbr
-mt9t001.lbr
-murata-resonators.lbr
-national.lbr
-ncp5009.lbr
-opt301m.lbr
-osman-pic16f62x.lbr
-philips.lbr
-phoenix_gicv-gf.lbr
-phytec.lbr
-platinen.lbr
-polyswitch_smd.lbr
-rcm2200.lbr
-rds-decoder.lbr
-renesas.lbr
-renesas_mcu.lbr
-resistor-bourns.lbr
-resistor-ruf.lbr
-rf-micro-devices.lbr
-rfm-ash-02.lbr
-rfm-ash.lbr
-satcard.lbr
-scenix4.lbr
-sgs-thom.lbr
-sharp-arm.lbr
-sht11.lbr
-smd-special.lbr
-smsc.lbr
-stuart.lbr
-stv_mk3ds1.lbr
-supply1.lbr
-switch-copal.lbr
-tcm3105.lbr
-tex.lbr
-tex2.lbr
-texas-msp.lbr
-ti_msc1210.lbr
-tiger.lbr
-tms2406.lbr
-tms2810.lbr
-traco.lbr
-transistor-fet.lbr
-ua9638.lbr
-ubicom.lbr
-ubicom_v2.lbr
-uc-dimm.lbr
-unipac.lbr
-vs1001.lbr
-waveform.lbr
-weid762.lbr
-wima_c.lbr
-winbond-w9021x.lbr
-wolleatmel.lbr
-zilog-z8-encore-v1_2a.lbr
+./libscripts:
+dodescriptions.sh
