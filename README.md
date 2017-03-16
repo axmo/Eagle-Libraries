@@ -36,7 +36,7 @@ the location and choose `Yes` to create the directory.
     
     `$HOME/external_lbrs` changes to: /Users/[USERNAME]/external_lbrs
     
-###On Windows: 
+### On Windows: 
     
     `$HOME\external_lbrs` changes to: C:\Users\[USERNAME]\Documents\external_lbrs
 
@@ -51,7 +51,6 @@ Refer to the file changelog.txt
 
 ## Some useful library locations
 
-* [edge.rit.edu](http://edge.rit.edu/edge/P16250/public/Electrical/Eagle%20Libraries/Element14)
 * [www.element14.com](https://www.element14.com/community/community/cadsoft_eagle/blog/2015/01/15/the-10-most-popular-cadsoft-eagle-libraries)
 * [sparkfun](https://github.com/sparkfun/SparkFun-Eagle-Libraries)
 * [www.element14.com/community](https://www.element14.com/community/community/cadsoft_eagle/eagle_cad_libraries?ICID=cadsoft-main-sidenav)
