@@ -34,11 +34,11 @@ the location and choose `Yes` to create the directory.
 
 ### On Mac OS X:
     
-    `$HOME/external_lbrs` changes to: /Users/[USERSNAME]/external_lbrs
+    `$HOME/external_lbrs` changes to: /Users/[USERNAME]/external_lbrs
     
 ###On Windows: 
     
-    `$HOME\external_lbrs` changes to: C:\Users\[USERSNAME]\Documents\external_lbrs
+    `$HOME\external_lbrs` changes to: C:\Users\[USERNAME]\Documents\external_lbrs
 
 6. Find and open the `external_lbrs` folder. Unzip and drag `adafruit.` and pacav69 libraries' into the 
    new `external_lbrs` folder.
