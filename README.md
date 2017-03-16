@@ -65,6 +65,6 @@ Refer to the file changelog.txt
 
 * [www.elecrom.com](http://www.elecrom.com/eagle-library-list-of-most-commonly-used-electronics-components/)
 
-[clean-up-the-parts-list](https://www.baldengineer.com/eagle-clean-up-the-parts-list-by-disabling-libraries.html)
+* [clean-up-the-parts-list](https://www.baldengineer.com/eagle-clean-up-the-parts-list-by-disabling-libraries.html)
 
 
