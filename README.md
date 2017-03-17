@@ -14,10 +14,11 @@ to download this as a zip file.
 to download this as a zip file.
 
 ### Installation
+#### To use Libraries:
 
-1. Open Eagle and select the `Control Panel` window.
-2. Choose `Options` and from the drop down that appears, `Directories`.
-3. Change the Libraries line from: `$EAGLEDIR/lbr` to something like:
+* Open Eagle and select the `Control Panel` window.
+* Choose `Options` and from the drop down that appears, `Directories`.
+* Change the Libraries line from: `$EAGLEDIR/lbr` to something like:
 
 ### for Mac OS X:
 
@@ -26,9 +27,22 @@ to download this as a zip file.
 ### for Windows:
 
 	$EAGLEDIR\lbr;$HOME\external_lbrs 
+	
+#### To use Datasheets:
+* Open Eagle and select the `Control Panel` window.
+* Choose `Options` and from the drop down that appears, `Directories`.
+* Change the Documents line from: `$EAGLEDIR/doc` to something like:
+
+### for Mac OS X:
+
+	$EAGLEDIR/doc:$HOME/external_lbrs/Datasheets
+     
+### for Windows:
+
+	$EAGLEDIR\lbr;$HOME\external_lbrs\Datasheets
     
 
-4. Click `OK` to save your changes.
+* Click `OK` to save your changes.
 5. Eagle will prompt to create the directory if it does not already exist. Note 
 the location and choose `Yes` to create the directory.
 
@@ -40,12 +54,11 @@ the location and choose `Yes` to create the directory.
     
     `$HOME\external_lbrs` changes to: C:\Users\[USERNAME]\Documents\external_lbrs
 
-6. Find and open the `external_lbrs` folder. Unzip and drag `adafruit.` and pacav69 libraries' into the 
-   new `external_lbrs` folder.
-7. Restart Eagle. The library should be now be usable. 
 
-8. Use the Eagle Cad control panel to browse libraries.
-
+* Find and open the `external_lbrs` folder. Unzip and drag `adafruit.` and 'pacav69' libraries' into the new `external_lbrs` folder.
+* Restart Eagle. The library should be now be usable. 
+* Use the Eagle Cad control panel to browse libraries.
+* 
 ## Changes
 Refer to the file changelog.txt 
 
