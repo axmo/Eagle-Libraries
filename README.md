@@ -55,6 +55,7 @@ Refer to the file changelog.txt
 * [sparkfun](https://github.com/sparkfun/SparkFun-Eagle-Libraries)
 * [www.element14.com/community](https://www.element14.com/community/community/cadsoft_eagle/eagle_cad_libraries?ICID=cadsoft-main-sidenav)
 * [element-14-all-cad-files](https://www.element14.com/community/thread/36914/l/element-14-all-cad-files)
+* [bobstarr.net](http://www.bobstarr.net/pages/downloads.html)
 
 ## User Language Programs (ULP)
 

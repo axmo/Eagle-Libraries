@@ -1,5 +1,11 @@
 ﻿EAGLE Library ChangeLog
 =======================
+2017-03-17
+added:
+    Lbr_user  from www.bobstarr.net
+
+renamed folders to remove spaces 
+
 2017-03-16
 Removed:
     lbr-depreciated (not compatable with AUTODESK Eagle Cad v8.10)
