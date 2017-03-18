@@ -57,6 +57,37 @@ to download this as a zip file.
 
 	$EAGLEDIR\ulp;$HOME\external_lbrs\ULPs
     
+
+### For Scr:
+* Open Eagle and select the `Control Panel` window.
+* Choose `Options` and from the drop down that appears, `Directories`.
+* Change the User Language Programs line from: `$EAGLEDIR/scr` to something like:
+
+### for Mac OS X:
+
+	$EAGLEDIR/scr:$HOME/external_lbrs/Scr
+     
+### for Windows:
+
+	$EAGLEDIR\scr;$HOME\external_lbrs\Scr
+    
+* Click `OK` to save your changes.
+Eagle will prompt to create the directory if it does not already exist. Note the location and choose `Yes` to create the directory.
+
+
+### For Dru:
+* Open Eagle and select the `Control Panel` window.
+* Choose `Options` and from the drop down that appears, `Directories`.
+* Change the User Language Programs line from: `$EAGLEDIR/Dru` to something like:
+
+### for Mac OS X:
+
+	$EAGLEDIR/dru:$HOME/external_lbrs/Dru
+     
+### for Windows:
+
+	$EAGLEDIR\dru;$HOME\external_lbrs\Dru
+    
 * Click `OK` to save your changes.
 Eagle will prompt to create the directory if it does not already exist. Note the location and choose `Yes` to create the directory.
 
