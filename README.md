@@ -124,6 +124,8 @@ Refer to the file changelog.txt
 For datasheets you can use a search engine such as google, yahoo or whatever you use to find using the manufacturers part number.
 You can also goto the manfacturers website to find the datasheet.
 
+[alldatasheet.com](http://www.alldatasheet.com/)
+
 ## User Language Programs (ULP)
 
 * [element14](https://www.element14.com/community/community/cadsoft_eagle/blog/2015/01/19/eagle-ulps-every-user-should-know)
