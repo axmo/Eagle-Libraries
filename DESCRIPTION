@@ -16,6 +16,7 @@ Diodes
 Discrete
 Docs
 DrillingHoles
+Dru
 Element14ALLCADfiles
 Filters
 Fuses
@@ -326,6 +327,8 @@ Using Sublime text editor as an external editor in.txt
 ./DrillingHoles:
 DESCRIPTION
 holes.lbr
+
+./Dru:
 
 ./Element14ALLCADfiles:
 3M_By_element14_Batch_1.lbr
@@ -1505,7 +1508,7 @@ transistors_gaui.lbr
 triggered_devices.lbr
 
 ./ULPs:
-DESCRIPTION
+DESCRIPTIONULPEX
 Felicitas_PCBSim.ulp
 README.md
 bom.ulp
