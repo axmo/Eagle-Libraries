@@ -14,10 +14,13 @@ to download this as a zip file.
 to download this as a zip file.
 
 ### Installation
-#### To use Libraries:
+#### Usage:
 
 * Open Eagle and select the `Control Panel` window.
 * Choose `Options` and from the drop down that appears, `Directories`.
+
+### For Libraries:
+
 * Change the Libraries line from: `$EAGLEDIR/lbr` to something like:
 
 ### for Mac OS X:
@@ -28,9 +31,8 @@ to download this as a zip file.
 
 	$EAGLEDIR\lbr;$HOME\external_lbrs 
 	
-#### To use Datasheets:
-* Open Eagle and select the `Control Panel` window.
-* Choose `Options` and from the drop down that appears, `Directories`.
+#### For Datasheets:
+
 * Change the Documents line from: `$EAGLEDIR/doc` to something like:
 
 ### for Mac OS X:
@@ -39,12 +41,26 @@ to download this as a zip file.
      
 ### for Windows:
 
-	$EAGLEDIR\lbr;$HOME\external_lbrs\Datasheets
-    
+	$EAGLEDIR\doc;$HOME\external_lbrs\Datasheets
+ 
 
+#### For ULPs:
+* Open Eagle and select the `Control Panel` window.
+* Choose `Options` and from the drop down that appears, `Directories`.
+* Change the User Language Programs line from: `$EAGLEDIR/ulp` to something like:
+
+### for Mac OS X:
+
+	$EAGLEDIR/ulp:$HOME/external_lbrs/ULPs
+     
+### for Windows:
+
+	$EAGLEDIR\ulp;$HOME\external_lbrs\ULPs
+    
 * Click `OK` to save your changes.
-5. Eagle will prompt to create the directory if it does not already exist. Note 
-the location and choose `Yes` to create the directory.
+Eagle will prompt to create the directory if it does not already exist. Note the location and choose `Yes` to create the directory.
+
+## File locations:
 
 ### On Mac OS X:
     
@@ -54,15 +70,17 @@ the location and choose `Yes` to create the directory.
     
     `$HOME\external_lbrs` changes to: C:\Users\[USERNAME]\Documents\external_lbrs
 
-
+## Copy files:
 * Find and open the `external_lbrs` folder. Unzip and drag `adafruit.` and 'pacav69' libraries' into the new `external_lbrs` folder.
 * Restart Eagle. The library should be now be usable. 
 * Use the Eagle Cad control panel to browse libraries.
-* 
+
 ## Changes
 Refer to the file changelog.txt 
 
-## Some useful library locations
+## Some useful links
+
+## Library
 
 * [www.element14.com](https://www.element14.com/community/community/cadsoft_eagle/blog/2015/01/15/the-10-most-popular-cadsoft-eagle-libraries)
 * [sparkfun](https://github.com/sparkfun/SparkFun-Eagle-Libraries)
@@ -70,9 +88,36 @@ Refer to the file changelog.txt
 * [element-14-all-cad-files](https://www.element14.com/community/thread/36914/l/element-14-all-cad-files)
 * [bobstarr.net](http://www.bobstarr.net/pages/downloads.html)
 
+## Datasheets
+
+For datasheets you can use a search engine such as google, yahoo or whatever you use to find using the manufacturers part number.
+You can also goto the manfacturers website to find the datasheet.
+
 ## User Language Programs (ULP)
 
 * [element14](https://www.element14.com/community/community/cadsoft_eagle/blog/2015/01/19/eagle-ulps-every-user-should-know)
+
+* [bobstarr.net](http://www.bobstarr.net/pages/downloads.html)
+
+
+## Scripts (SCR)
+
+* [bobstarr.net](http://www.bobstarr.net/pages/downloads.html)
+
+
+## Design blocks
+
+## Design rules
+* [bobstarr.net](http://www.bobstarr.net/pages/downloads.html)
+
+
+## CAM Jobs
+* [bobstarr.net](http://www.bobstarr.net/pages/downloads.html)
+
+
+## Projects
+* [bobstarr.net](http://www.bobstarr.net/pages/downloads.html)
+
 
 
 ## Useful tips
@@ -80,5 +125,8 @@ Refer to the file changelog.txt
 * [www.elecrom.com](http://www.elecrom.com/eagle-library-list-of-most-commonly-used-electronics-components/)
 
 * [clean-up-the-parts-list](https://www.baldengineer.com/eagle-clean-up-the-parts-list-by-disabling-libraries.html)
+
+# Disclaimer
+THESE LIBRARIES, SCRIPTS AND CAM JOBS ARE PROVIDED AS IS WITHOUT WARRANTY OF ANY KIND, EXPRESSED OR IMPLIED; WITHOUT EVEN THE IMPLIED WARRANTY OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE. THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THESE LIBRARY COMPONENTS AND SCRIPT FILES ARE WITH YOU. SHOULD ANY COMPONENT PROVE DEFECTIVE, YOU ASSUME THE COST OF ALL NECESSARY REPLACEMENT, SERVICING, REPAIR OR REWORK. THE USER ASSUMES ALL RISK BY USING THE FILES.
 
 
