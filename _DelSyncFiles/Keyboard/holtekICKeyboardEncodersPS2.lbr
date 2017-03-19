@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="8.1.0">
+<eagle version="8.0.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -55,23 +55,13 @@
 <layer number="98" name="Guide" color="6" fill="1" visible="yes" active="yes"/>
 </layers>
 <library>
-<description>&lt;table width="390" border="1" cellpadding="1" cellspacing="1"&gt;
-  &lt;tr&gt; 
-    &lt;td width="81" bgcolor="#33CCFF"&gt;&lt;strong&gt;Developer&lt;/strong&gt;&lt;/td&gt;
-    &lt;td width="`190" bgcolor="#33CCFF"&gt;&lt;strong&gt;Description&lt;/strong&gt;&lt;/td&gt;
-    &lt;td width="89" bgcolor="#33CCFF"&gt;&lt;strong&gt;Date&lt;/strong&gt;&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt; 
-    &lt;td&gt;Element14&lt;/td&gt;
-    &lt;td&gt;HT82K628A&lt;/td&gt;
-    &lt;td&gt;30/Jul/2012&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt; 
-    &lt;td&gt;Paul Cavanagh&lt;/td&gt;
-    &lt;td&gt;HT82K629A&lt;/td&gt;
-    &lt;td&gt;14/Mar/2017&lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/table&gt;</description>
+<description>Developed by element14 :&lt;br&gt;
+HT82K628A by element14&lt;br&gt;
+element14 CAD Library consolidation.ulp
+at 30/07/2012 09:39:13 &lt;p&gt;
+Developed by Paul Cavanagh :&lt;br&gt;
+HT82K629A
+at 14/Mar/2017</description>
 <packages>
 <package name="DIP254P1524X393-40">
 <pad name="1" x="-15.367" y="48.26" drill="1.1176" shape="square"/>

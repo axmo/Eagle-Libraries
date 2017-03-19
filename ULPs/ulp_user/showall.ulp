@@ -1,0 +1,32 @@
+
+/* 
+ * SHOWALL.ULP operates the INFO command on every part of your design.
+ * This allows you to verify the correct location of smashed parts NAMES
+ * and VALUES.
+ * Simply run the ULP on your board and proceed with SHOWALL.SCR. You'll
+ * get the infobox with highlighted part and belonging NAME and VALUE.
+ * Work down with ENTER until every part is checked.
+ * 
+ * Note: Make sure that the entire board is displayed on the screen, cause
+ * there's no way to change the section during a running script file.
+ * When you have parts on top and bottom layer with origins at the same 
+ * position, only the bottom one will be shown.
+*/
+
+int cnt=0, i = 0, coordx[], coordy[];
+
+string fname = "ShowAll.scr";
+
+if (board) board(B)
+{ 
+    fname = filesetext(B.name, "_show_all.scr");
+
+    output(fname,"t")
+    {
+        B.elements(E)
+        { 
+            string partid = E.name;
+            printf("INFO %s;\n", partid);
+        }
+    }
+}
