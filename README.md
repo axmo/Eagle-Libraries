@@ -119,6 +119,8 @@ Refer to the file changelog.txt
 * [element-14-all-cad-files](https://www.element14.com/community/thread/36914/l/element-14-all-cad-files)
 * [bobstarr.net](http://www.bobstarr.net/pages/downloads.html)
 
+* [pcblibraries.com](http://www.pcblibraries.com/)
+
 ## Datasheets
 
 For datasheets you can use a search engine such as google, yahoo or whatever you use to find using the manufacturers part number.
