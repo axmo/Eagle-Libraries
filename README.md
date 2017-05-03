@@ -1,3 +1,4 @@
+[![cavtronics logo](https://cldup.com/BhJv2ZU0rj.jpg)](http://www.cavtronics.com "cavtronics")
 ## Pacav69 Eagle Library
 
 Taken from various sources and some that i have created
