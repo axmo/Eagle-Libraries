@@ -1,0 +1,30 @@
+<b>Schematic Sheet Drawing Frames</b><p>
+These drawing frames use the following global attributes:<p>
+<table width="380" border="1" cellpadding="1" cellspacing="1" bordercolor="#000000">
+  <tr> 
+    <td width="81" bgcolor="#33CCFF"><strong>Attribute</strong></td>
+    <td width="289" bgcolor="#33CCFF"><strong>Description</strong></td>
+  </tr>
+  <tr> 
+    <td>>COMPANY</td>
+    <td>Company name title</td>
+  </tr>
+  <tr> 
+    <td>>REV</td>
+    <td>Drawn by user name</td>
+  </tr>
+  <tr> 
+    <td>>CHECKED</td>
+    <td>Checked by user name</td>
+  </tr>
+  <tr> 
+    <td>>DATE</td>
+    <td>Drawing origination/release date</td>
+  </tr>
+  <tr> 
+    <td>>DRGNO</td>
+    <td>Drawing number text string</td>
+  </tr>
+</table>
+<p>
+<author>Robert E. Starr, Jr. (http://www.bobstarr.net)</author>
