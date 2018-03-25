@@ -1,5 +1,19 @@
 ﻿EAGLE Library ChangeLog
 =======================
+Downloads
+http://eagle.autodesk.com/eagle/libraries
+https://www.diymodules.org/
+https://github.com/sparkfun/
+
+2018-03-25
+added:
+    expressif/ESP32/esp32  from https://github.com/sparkfun/ESP32_Miscellany
+    Diy-modules/diy-modules from https://www.diymodules.org/
+    esp826612q
+    epaper/etx-board
+    expressif/ESP32/Lolinv3
+    expressif/ESP32/ESP32_LOLIN
+    expressif/ESP32/esp32aithinker
 2017-03-17
 added:
     Lbr_user  from www.bobstarr.net
