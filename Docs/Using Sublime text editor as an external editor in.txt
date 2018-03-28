@@ -1,4 +1,7 @@
-Using Sublime text editor as an external editor in eaglecad use the following including quotes and "%F" for file opening.
+Using external editor
+Goto menu of Eagle CAD -->options -->user interface
+a dialog box will open, at the botton copy and paste the text as shown below.
 
+Using Sublime text editor as an external editor in Eagle CAD use the following text including quotes and "%F" for file opening.
 
 "/Applications/Sublime Text.app" "%F"
