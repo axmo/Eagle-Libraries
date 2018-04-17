@@ -22,7 +22,7 @@ to download this as a zip file.
 
 ### For Libraries:
 
-* Change the Libraries line from: `$EAGLEDIR/lbr` to something like:
+* Change the Libraries line from: `$EAGLEDIR/lbr` to something like the following:
 
 ### for Mac OS X:
 
