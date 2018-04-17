@@ -98,9 +98,14 @@ Eagle will prompt to create the directory if it does not already exist. Note the
     
     `$HOME/external_lbrs` changes to: /Users/[USERNAME]/external_lbrs
     
+where [USERNAME] is the login name 
+
+    
 ### On Windows: 
     
     `$HOME\external_lbrs` changes to: C:\Users\[USERNAME]\Documents\external_lbrs
+
+where [USERNAME] is the login name 
 
 ## Copy files:
 * Find and open the `external_lbrs` folder. Unzip and drag `adafruit.` and 'pacav69' libraries' into the new `external_lbrs` folder.
@@ -112,7 +117,7 @@ Refer to the file changelog.txt
 
 ## Some useful links
 
-## Library
+## Libraries
 
 * [www.element14.com](https://www.element14.com/community/community/cadsoft_eagle/blog/2015/01/15/the-10-most-popular-cadsoft-eagle-libraries)
 * [sparkfun](https://github.com/sparkfun/SparkFun-Eagle-Libraries)
@@ -121,6 +126,7 @@ Refer to the file changelog.txt
 * [bobstarr.net](http://www.bobstarr.net/pages/downloads.html)
 
 * [pcblibraries.com](http://www.pcblibraries.com/)
+* [componentsearchengine](https://componentsearchengine.com)
 
 ## Datasheets
 
@@ -162,12 +168,12 @@ You can also goto the manfacturers website to find the datasheet.
 
 * [clean-up-the-parts-list](https://www.baldengineer.com/eagle-clean-up-the-parts-list-by-disabling-libraries.html)
 
-# Disclaimer
-THESE LIBRARIES, SCRIPTS AND CAM JOBS ARE PROVIDED AS IS WITHOUT WARRANTY OF ANY KIND, EXPRESSED OR IMPLIED; WITHOUT EVEN THE IMPLIED WARRANTY OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE. THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THESE LIBRARY COMPONENTS AND SCRIPT FILES ARE WITH YOU. SHOULD ANY COMPONENT PROVE DEFECTIVE, YOU ASSUME THE COST OF ALL NECESSARY REPLACEMENT, SERVICING, REPAIR OR REWORK. THE USER ASSUMES ALL RISK BY USING THE FILES.
-
-
-p.s:
+## p.s:
 I **LOVE** coffee! Buy me a coffee at:   
 
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ZHBUNDXJXVW4U)
+
+
+# Disclaimer
+THESE LIBRARIES, SCRIPTS AND CAM JOBS ARE PROVIDED AS IS WITHOUT WARRANTY OF ANY KIND, EXPRESSED OR IMPLIED; WITHOUT EVEN THE IMPLIED WARRANTY OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE. THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THESE LIBRARY COMPONENTS AND SCRIPT FILES ARE WITH YOU. SHOULD ANY COMPONENT PROVE DEFECTIVE, YOU ASSUME THE COST OF ALL NECESSARY REPLACEMENT, SERVICING, REPAIR OR REWORK. THE USER ASSUMES ALL RISK BY USING THE FILES.
 
