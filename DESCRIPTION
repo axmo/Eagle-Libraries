@@ -590,8 +590,19 @@ element14list.txt
 etx-board.lbr
 
 ./Expressif:
+DFRobot
+ESP
 ESP32
 ESP8266
+
+./Expressif/DFRobot:
+DFR0478.l#1
+DFR0478.l#2
+DFR0478.lbr
+DFR0478_Firebeetle_ESP32.lbr
+
+./Expressif/ESP:
+ESP12E_DEVKIT.lbr
 
 ./Expressif/ESP32:
 ESP32_LOLIN.lbr
@@ -1896,6 +1907,7 @@ teardrops.ulp
 trace-layer.ulp
 ulp_user
 ulpmessage.ulp
+ulpplugins
 unidat.ulp
 update-packages.ulp
 useful-routines.ulp
@@ -2034,6 +2046,17 @@ Pad-MeasureNRd.png
 Pad-MeasureRd.png
 QFP-Measure.png
 SOP-Measure.png
+
+./ULPs/ulpplugins:
+SnapEDA-eagle-plugin.zip
+bom-ex.ulp
+oshprice_pcb.zip
+samacsys.zip
+win
+
+./ULPs/ulpplugins/win:
+EPW2v00.zip
+LibraryLoaderSetup2v24.msi.zip
 
 ./USB:
 DESCRIPTION

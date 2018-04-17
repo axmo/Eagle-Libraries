@@ -4,6 +4,11 @@ Downloads
 http://eagle.autodesk.com/eagle/libraries
 https://www.diymodules.org/
 https://github.com/sparkfun/
+https://componentsearchengine.com/
+
+2018-04-17
+Added Firebeetle lbr
+https://componentsearchengine.com/detail.html?searchString=DFR0478&manuf=DFRobot&source=63
 
 2018-03-25
 added:
