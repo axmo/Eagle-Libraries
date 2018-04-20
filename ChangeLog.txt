@@ -8,6 +8,8 @@ https://componentsearchengine.com/
 https://www.seeedstudio.com/opl.html
 https://github.com/adafruit/Adafruit-Eagle-Library
 
+https://github.com/adafruit/eagle2fritzing
+
 2018-04-20
 Added Open Parts Library (OPL)
 
