@@ -5,6 +5,11 @@ http://eagle.autodesk.com/eagle/libraries
 https://www.diymodules.org/
 https://github.com/sparkfun/
 https://componentsearchengine.com/
+https://www.seeedstudio.com/opl.html
+https://github.com/adafruit/Adafruit-Eagle-Library
+
+2018-04-20
+Added Open Parts Library (OPL)
 
 2018-04-17
 Added Firebeetle lbr
