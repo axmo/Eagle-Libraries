@@ -37,6 +37,7 @@ Memory
 MotorControllers
 Motors
 Network
+OPL-new
 Opto-electronics
 Pneumatic
 Pneumatics
@@ -587,17 +588,17 @@ Yageo_By_element14_Batch_1.lbr
 element14list.txt
 
 ./Epaper:
+DESCRIPTION
 etx-board.lbr
 
 ./Expressif:
+DESCRIPTION
 DFRobot
 ESP
 ESP32
 ESP8266
 
 ./Expressif/DFRobot:
-DFR0478.l#1
-DFR0478.l#2
 DFR0478.lbr
 DFR0478_Firebeetle_ESP32.lbr
 
@@ -1233,6 +1234,37 @@ teridian.lbr
 x-port.lbr
 xenpak-msa.lbr
 xport.lbr
+
+./OPL-new:
+New Parts for OPL v1.1
+New Parts for OPL v1.1.zip
+Seeed-Capacitor.lbr
+Seeed-Connector.lbr
+Seeed-Crystal Oscillator.lbr
+Seeed-Diode.lbr
+Seeed-Display.lbr
+Seeed-Fuse.lbr
+Seeed-IC.lbr
+Seeed-Inductor.lbr
+Seeed-LED.lbr
+Seeed-Relay.lbr
+Seeed-Resistor.lbr
+Seeed-Sensor.lbr
+Seeed-Switch.lbr
+Seeed-Transistor.lbr
+
+./OPL-new/New Parts for OPL v1.1:
+Seeed-OPL-2017-01-Antenna-akita.lbr
+Seeed-OPL-2017-01-Capacitor-akita.lbr
+Seeed-OPL-2017-01-Crystal-Akita.lbr
+Seeed-OPL-2017-01-Diode-james.lbr
+Seeed-OPL-2017-01-Fuse-Akita.lbr
+Seeed-OPL-2017-01-IC-Akita.lbr
+Seeed-OPL-2017-01-Inductor-Akita.lbr
+Seeed-OPL-2017-01-Sensor-camilo.lbr
+Seeed-OPL-2017-01-Switch-camilo.lbr
+Seeed-OPL-2017-01-connector-edward.lbr
+Seeed-OPL-2017-01-display-edward.lbr
 
 ./Opto-electronics:
 DESCRIPTION
