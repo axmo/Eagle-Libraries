@@ -8,3 +8,4 @@
 *.b#*
 *.s#*
 *.l#*
+_DelSyncFiles/*
