@@ -1,0 +1,178 @@
+// https://jlcpcb.com/quote?orderType=1
+#usage "en: <b>Calculate the price of a dual-layer PCB if you order them at JLCPCB.</b>"
+           "<p>Usage: run jlcpcb</p>"
+           "<p>Author: <author>CavTronics &lt;info@cavtronics.com&gt;</author><br />"
+           "Version: <em>201804091823</em></p>"
+
+// THIS PROGRAM IS PROVIDED AS IS AND WITHOUT WARRANTY OF ANY KIND, EXPRESSED OR IMPLIED
+
+void main() {
+	if(!board) {
+		// No board
+		dlgMessageBox(":You need to run this ULP on a BOARD!");
+		exit(0);
+	}
+
+	// Request amount needed
+	int amount = 10;
+	int result = dlgDialog("Price Calculator") {
+      dlgVBoxLayout {
+				   dlgLabel("&Amount of PCBs:");
+				   dlgIntEdit(amount);
+				   dlgPushButton("+Calculate price") dlgAccept(42);
+				   }
+				};
+	if (result != 42) exit (0);
+
+	board(B) {
+     	char firstPoint = 'y';
+     	real x1;
+     	real y1;
+     	real x2;
+     	real y2;
+		B.wires(W) {
+			if (W.layer == LAYER_DIMENSION) {
+				// Wire is on dimension layer
+				real wx1 = u2inch(W.x1);
+				real wy1 = u2inch(W.y1);
+				real wx2 = u2inch(W.x2);
+				real wy2 = u2inch(W.y2);
+
+				// Start point of wire
+				if(firstPoint == 'y') {
+					firstPoint = 'n';
+					x1 = wx1;
+					x2 = wx1;
+					y1 = wy1;
+					y2 = wy2;
+				} else {
+					if(wx1 > x1) {
+						x1 = wx1;
+					}
+					if(wx1 < x2) {
+						x2 = wx1;
+					}
+					if(wy1 > y1) {
+						y1 = wy1;
+					}
+					if(wy1 < y2) {
+						y2 = wy1;
+					}
+				}
+
+				// End point of wire
+				if(wx2 > x1) {
+					x1 = wx2;
+				}
+				if(wx2 < x2) {
+					x2 = wx2;
+				}
+				if(wy2 > y1) {
+					y1 = wy2;
+				}
+				if(wy2 < y2) {
+					y2 = wy2;
+				}
+
+			}
+	   	}
+
+	   	real width = abs(x1 - x2);
+	   	real height = abs(y1 - y2);
+	   	real dim = width * height;
+
+	   	if(dim == 0) {
+	   		// Invalid
+			dlgMessageBox(":Could not determine board dimensions.\nAre you sure you have drawn the outline on the Dimensions layer?");
+			exit(0);
+	   	} else if(width < 0.25 || height < 0.25) {
+	   		dlgMessageBox(":Board is too small to be processed by OSH Park.");
+			exit(0);
+		} else if(dim > 371.25 || width > 16.5 || height > 22.5) {
+			dlgMessageBox(":Board is too large to be processed by OSH Park.");
+			exit(0);
+		}
+
+	   	int ppsq = 1; // price per square
+	   	int boardDivider = 3; // How many boards for the price per square
+	   	int actualAmount = amount;
+	   	string type = "Standard 2 layer";
+	   	if(amount >= 10 && (dim * amount) >= 150) {
+	   		type = "2 layer medium run";
+	   		ppsq = 1;
+	   		boardDivider = 1;
+	   	} else {
+	   		actualAmount = amount + ((3 - (amount % 3)) % 3);
+	   	}
+	   	real pbrd = (ppsq * dim) / boardDivider;
+	   	real ptotal = ppsq * dim * (actualAmount / boardDivider);
+
+	   	string info;
+	   	sprintf(info, "JLCPCB - Estimates\n===============================\nType:\t%s\nMy dimensions:\t%.3f in x %.3f in\n\nOrder amount:\t%d\nPrice per board:\t%.2f USD\nEstimated total price:\t%.2f USD",
+	   	 type, width, height, actualAmount, pbrd, ptotal);
+
+        // Calculate DirtyPCBs.com price too :)
+        // Convert to centimeters
+        width = width * 2.54;
+        height = height * 2.54;
+        real panelizeAddition = 0.1;
+        if(width > 10 || height > 10) {
+        	dlgMessageBox("PCB is too large for DirtyPCBs.com");
+        	dlgMessageBox(info);
+        } else {
+			int size = (width > 5 || height > 5) ? 10 : 5;
+			real count_w = max(1, floor(size / (width + panelizeAddition)));
+			real count_h = max(1, floor(size / (height + panelizeAddition)));
+			int amountPerBoard = count_w * count_h;
+			int orderAmount = ceil(amount / amountPerBoard);
+        	real dirtytotal = 14;
+        	int dirtyAmount = 10;
+        	if(size == 5) {
+        		// 5x5
+        		if(orderAmount <= 10) {
+        			dirtyAmount = 10;
+        			dirtytotal = 14;
+        		} else if(orderAmount <= 20) {
+        			dirtyAmount = 20;
+        			dirtytotal = 20;
+        		} else if(orderAmount <= 30) {
+        			dirtyAmount = 30;
+        			dirtytotal = 29;
+        		} else if(orderAmount <= 50) {
+        			dirtyAmount = 50;
+        			dirtytotal = 39;
+        		} else {
+        			dirtyAmount = 100;
+        			dirtytotal = 79;
+        		}
+        	} else {
+        		// 10x10
+        		if(orderAmount <= 10) {
+        			dirtyAmount = 10;
+        			dirtytotal = 25;
+        		} else if(orderAmount <= 20) {
+        			dirtyAmount = 20;
+        			dirtytotal = 45;
+        		} else if(orderAmount <= 30) {
+        			dirtyAmount = 30;
+        			dirtytotal = 69;
+        		} else if(orderAmount <= 50) {
+        			dirtyAmount = 50;
+        			dirtytotal = 110;
+        		} else {
+        			dirtyAmount = 100;
+        			dirtytotal = 180;
+        		}
+        	}
+
+        	int dirtybrdcount = dirtyAmount * amountPerBoard;
+        	real dirtybrdprice = dirtytotal / dirtybrdcount;
+
+	   		sprintf(info, "%s\n\n\nDirtyPCBs.com - Estimates\n===============================\nBoard Size:\t%d cm\nMy dimensions:\t%.3f cm x %.3f cm\n\nOrder amount:\t%d\nPanelized fit:\t%d\nTotal boards:\t%d\nPrice per board:\t%.2f USD\nEstimated total price:\t%.2f USD",
+	   	 info, size, width, height, dirtyAmount, amountPerBoard, dirtybrdcount, dirtybrdprice, dirtytotal);
+	        dlgMessageBox(info);
+        }
+
+     }
+}
+

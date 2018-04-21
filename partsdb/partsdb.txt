@@ -1,0 +1,3 @@
+ATMEGA644A-AU	Microchip Technology	DK	ATMEGA644A-AU-ND		44-TQFP                            
+ATMEGA644A-AUR	Microchip Technology	DK	ATMEGA644A-AURCT-ND		44-TQFP                            
+PHOTONH	Particle Industries, Inc.	DK	1878-1000-ND	                                            PHOTON WITH HEADERS                                        	None
