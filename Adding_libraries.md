@@ -28,6 +28,18 @@ Copy custom or third party libraries to external_lbrs
 
 The advantage of using this method is that when Eagle CAD is updated the custom or third party libraries will not be overwritten or lost.
 
-for more details visit my github 
-https://github.com/pacav69/Eagle-Libraries
+# Finding Libraries
+
+For those searching for CAD libraries i recommend using this search site
+
+
+ [componentsearchengine](https://componentsearchengine.com)
+
+This can provide CAD libraries for a number of CAD programs such as Altium, Eagle, EasyEDA, KiCad and more. If the part does not exist you can request for it to built. Try to make sure you have the technical documents that is required such as mechanical, specs, datasheets etc.
+
+For example a part in a post on https://electronics.stackexchange.com/ here is the link:
+
+[Digikey site - Manufacturers Part Number BQ78350DBTR-R1](https://componentsearchengine.com/part.php?partID=834563)
+
+
 
