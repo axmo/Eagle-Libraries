@@ -12,7 +12,7 @@ import Tkinter
 import tkMessageBox
 
 # This is our path to the BOM-EX database file
-PARTSDB = "partsdb.txt"
+PARTSDB = "partsdbmouser.txt"
 
 verno = "1.1"
 mfgPartNo = None
@@ -23,7 +23,12 @@ package = "None"
 #  MOUSER_URL = 'http://www.digikey.com/product-detail/en/0/'
 # https://au.mouser.com/Electronic-Components/?InStock=False&RoHSCompliant=False
 # MOUSER_URL = 'https://au.mouser.com/Search/Refine.aspx?Keyword='
-MOUSER_URL = 'https://au.mouser.com/Search/Refine.aspx?Keyword='
+#MOUSER_URL = 'https://au.mouser.com/Search/Refine.aspx?Keyword='
+
+# https://au.mouser.com/ProductDetail/895-CLEO35-WIFI1
+
+MOUSER_URL = 'https://au.mouser.com/ProductDetail/'
+
 
 # https://au.mouser.com/Search/Refine.aspx?Keyword=ATMEGA644A-AU
 USER_AGENT = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_5_8) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.151 Safari/535.19"
@@ -36,12 +41,14 @@ with open(PARTSDB, 'a') as file:
 		print "\n"
    		print"You need to specify a Mouser partNo!\n"
    		print"Version: "+ verno +"\nUsage: python addMouserPartToBom-ex.py MouserPartNo\n"
-   		print"eg python addMouserPartToBom-ex.py ATMEGA644A-AU-ND"
+   		print"eg python addMouserPartToBom-ex.py 895-CLEO35-WIFI1"
    	else:
 		partNo = sys.argv[1]
 
 		# There's a more robust way to do this
-		url = MOUSER_URL + partNo.replace("/", "%2F").replace("#", "%23")
+		# url = MOUSER_URL + partNo.replace("/", "%2F").replace("#", "%23")
+		url = MOUSER_URL + partNo
+
 		print("mouser url= "+ url)
 
 		# Grab the data!
@@ -105,10 +112,18 @@ with open(PARTSDB, 'a') as file:
 				except:
 					pass
 
+			# Part # Aliases:
+			# Parse out the Part # Aliases
+			for elem in soup(text=re.compile(r'Part # Aliases')):
+				try:
+					parent = elem.parent.parent
+					mfg = parent.span.span.contents[0]
+				except:
+					pass
 			# We got everything we needed! Add the part to the database.
 			if mfgPartNo is not None and mfg is not None and desc is not None and package is not None:
 
-				entry = "%s\t%s\tDK\t%s\t%s\t%s\n" % (mfgPartNo, mfg, partNo, desc, package)
+				entry = "%s\t%s\tDK\t%s\t%s\t%s\n" % (mfgPartNo, mfg, partNo, desc, package, Aliases)
 				entry = entry.replace('\n', '')
 		  		entry = entry.replace('\r', '')
 		  		entry = entry + '\n'
@@ -124,6 +139,6 @@ with open(PARTSDB, 'a') as file:
 
 			# Something went wrong, the part was not found, Mouser changed their site layout, etc.
 			else:
-				print mfgPartNo, mfg, partNo, desc, package
+				print mfgPartNo, mfg, partNo, desc, package, Aliases
 				print "Error adding entry"
 				sys.exit(1)

@@ -1,3 +1,6 @@
 ATMEGA644A-AU	Microchip Technology	DK	ATMEGA644A-AU-ND		44-TQFP                            
 ATMEGA644A-AUR	Microchip Technology	DK	ATMEGA644A-AURCT-ND		44-TQFP                            
 PHOTONH	Particle Industries, Inc.	DK	1878-1000-ND	                                            PHOTON WITH HEADERS                                        	None
+2491	Adafruit Industries LLC	DK	1528-1438-ND	                                            ESP8266 SMT MODULE                                        	Module                            
+2491	Adafruit Industries LLC	DK	1528-1438-ND	                                            ESP8266 SMT MODULE                                        	Module                            
+2491	Adafruit Industries LLC	DK	1528-1438-ND	                                            ESP8266 SMT MODULE                                        	Module                            

@@ -10,14 +10,14 @@ import re
 import Tkinter
 import tkMessageBox
 
-import os
-# pip install psutil
-import psutil
+# import os
+# # pip install psutil
+# import psutil
 
 # do stuff here
 
-if psutil.Process(os.getpid()).parent.name == 'terminal':
-    raw_input("Press enter to close...")
+# if psutil.Process(os.getpid()).parent.name == 'terminal':
+#     raw_input("Press enter to close...")
 
 #import urllib
 # import ctypes  # An included library with Python install.
@@ -153,7 +153,7 @@ with open(PARTSDB, 'a') as file:
 				print entry
 
 				file.write(entry)
-				tkMessageBox.showinfo("Information","Digikey Part Number: "+partNo+" has been added to parts db")
+				# tkMessageBox.showinfo("Information","Digikey Part Number: "+partNo+" has been added to parts db")
 
 
 			# Something went wrong, the part was not found, DigiKey changed their site layout, etc.
