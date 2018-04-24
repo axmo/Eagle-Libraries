@@ -4,3 +4,4 @@ PHOTONH	Particle Industries, Inc.	DK	1878-1000-ND	                              
 2491	Adafruit Industries LLC	DK	1528-1438-ND	                                            ESP8266 SMT MODULE                                        	Module                            
 2491	Adafruit Industries LLC	DK	1528-1438-ND	                                            ESP8266 SMT MODULE                                        	Module                            
 2491	Adafruit Industries LLC	DK	1528-1438-ND	                                            ESP8266 SMT MODULE                                        	Module                            
+BQ78350DBTR-R1	Texas Instruments	DK	296-44315-1-ND		30-TFSOP (0.173", 4.40mm Width)                            
