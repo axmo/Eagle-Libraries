@@ -1,3 +1,4 @@
+MPN	Manf	MFC	Digikey	package
 ATMEGA644A-AU	Microchip Technology	DK	ATMEGA644A-AU-ND		44-TQFP                            
 ATMEGA644A-AUR	Microchip Technology	DK	ATMEGA644A-AURCT-ND		44-TQFP                            
 PHOTONH	Particle Industries, Inc.	DK	1878-1000-ND	                                            PHOTON WITH HEADERS                                        	None
@@ -5,3 +6,4 @@ PHOTONH	Particle Industries, Inc.	DK	1878-1000-ND	                              
 2491	Adafruit Industries LLC	DK	1528-1438-ND	                                            ESP8266 SMT MODULE                                        	Module                            
 2491	Adafruit Industries LLC	DK	1528-1438-ND	                                            ESP8266 SMT MODULE                                        	Module                            
 BQ78350DBTR-R1	Texas Instruments	DK	296-44315-1-ND		30-TFSOP (0.173", 4.40mm Width)                            
+LO R976-PS-1	OSRAM Opto Semiconductors Inc.	DK	475-2488-2-ND		0805 (2012 Metric)                            
