@@ -1,0 +1,1202 @@
+<!DOCTYPE html>
+<!-- saved from url=(0078)https://www.allaboutcircuits.com/technical-articles/eagle-cad-tips-and-tricks/ -->
+<html lang="en" class="js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="robots" content="noodp">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://www.allaboutcircuits.com/technical-articles/eagle-cad-tips-and-tricks/">
+<meta property="og:title" content="Easier PCB Design: Eagle CAD Tips and Tricks">
+<meta property="og:image" content="https://www.allaboutcircuits.com/uploads/thumbnails/EAGLE_CAD_screen_shot.jpg">
+<meta name="thumbnail" content="https://www.allaboutcircuits.com/uploads/thumbnails/EAGLE_CAD_screen_shot.jpg">
+<meta property="og:description" content="Most hobbyists and many professionals use Eagle CAD as a daily tool in designing schematics and laying out PCB. You&#39;re going to learn some tips and tricks for using Eagle CAD, which will make your work much easier and faster.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@allaboutcircuit">
+<link href="https://plus.google.com/102476148263859151067/" rel="publisher">
+<title>Easier PCB Design: Eagle CAD Tips and Tricks</title>
+
+<link rel="icon" href="https://www.allaboutcircuits.com/assets/images/favicon.ico">
+
+<link rel="alternate" type="application/rss+xml" title="All About Circuits Articles" href="https://www.allaboutcircuits.com/rss/">
+<link rel="alternate" type="application/rss+xml" title="All About Circuits Forum RSS Feed" href="https://forum.allaboutcircuits.com/forums/-/index.rss">
+<link rel="alternate" type="application/rss+xml" title="All About Circuits Blog RSS Feed" href="https://forum.allaboutcircuits.com/blogs/entriesRss.rss">
+
+<link href="./Easier PCB Design_ Eagle CAD Tips and Tricks_files/bootstrap.min.css" rel="stylesheet">
+
+<link href="./Easier PCB Design_ Eagle CAD Tips and Tricks_files/combined.css" rel="stylesheet">
+<link href="./Easier PCB Design_ Eagle CAD Tips and Tricks_files/main_site.css" rel="stylesheet">
+<link href="./Easier PCB Design_ Eagle CAD Tips and Tricks_files/font-awesome.min.css" rel="stylesheet">
+<link href="./Easier PCB Design_ Eagle CAD Tips and Tricks_files/aac-parts.css" rel="stylesheet">
+
+<link href="./Easier PCB Design_ Eagle CAD Tips and Tricks_files/docco.css" rel="stylesheet">
+
+<script type="text/javascript" async="" src="./Easier PCB Design_ Eagle CAD Tips and Tricks_files/js"></script><script src="./Easier PCB Design_ Eagle CAD Tips and Tricks_files/1808435332737507" async=""></script><script async="" src="./Easier PCB Design_ Eagle CAD Tips and Tricks_files/fbevents.js"></script><script async="" src="./Easier PCB Design_ Eagle CAD Tips and Tricks_files/analytics.js"></script><script async="" type="text/javascript" src="./Easier PCB Design_ Eagle CAD Tips and Tricks_files/gpt.js"></script><script src="./Easier PCB Design_ Eagle CAD Tips and Tricks_files/jquery.min.js"></script>
+<script src="./Easier PCB Design_ Eagle CAD Tips and Tricks_files/jquery.cookie.min.js"></script>
+<!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/es5-shim/4.1.1/es5-shim.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/es5-shim/4.1.1/es5-sham.js"></script>
+    
+    <script src="/assets/js/css3-mediaqueries.js"></script>
+    <link href="/assets/css/ie8.css" rel="stylesheet">
+    <![endif]-->
+
+<script type="text/javascript">
+      
+  function searchFor(obj, query) {
+    for(var key in obj) {
+      if(obj.hasOwnProperty(key) && (typeof obj[key] === "string")) {
+        if(obj[key] === query) {
+          return true;
+        }
+      }
+    }
+    return false;
+  }
+  var googletag = googletag || {};
+  googletag.cmd = googletag.cmd || [];
+  (function() {
+    var gads = document.createElement('script');
+    gads.async = true;
+    gads.type = 'text/javascript';
+    var useSSL = 'https:' == document.location.protocol;
+    gads.src = (useSSL ? 'https:' : 'http:') +
+      '//www.googletagservices.com/tag/js/gpt.js';
+    var node = document.getElementsByTagName('script')[0];
+    node.parentNode.insertBefore(gads, node);
+  })();
+</script>
+<script type="text/javascript">
+  googletag.cmd.push(function() {
+	var mappingSidebar = googletag.sizeMapping().
+    	addSize([0,0], [300, 250]).
+        addSize([800, 600], [[300, 600], [300, 250]]).
+        build();  
+        
+    googletag.pubads().setTargeting("category",["eda","pcb","computers-peripherals","eda","pcb"]);
+    googletag.defineSlot('/62616433/main_sidebar', [[300, 600], [300, 250]], 'div-gpt-ad-1429623690593-0').defineSizeMapping(mappingSidebar).addService(googletag.pubads());
+    
+    googletag.pubads().enableSingleRequest();
+    googletag.pubads().collapseEmptyDivs();
+    googletag.enableServices();
+  });
+</script>
+<script type="text/javascript">
+  googletag.cmd.push(function() {
+	var mappingLeaderboard = googletag.sizeMapping().
+    	addSize([0,0], [[300, 50], [320, 50]]).
+        addSize([800, 600], [728,90]).
+        build();  
+  
+    googletag.defineSlot('/62616433/main_leaderboard', [[728, 90], [320,50], [300, 50]], 'div-gpt-ad-1430160961981-0').defineSizeMapping(mappingLeaderboard).addService(googletag.pubads());
+    googletag.pubads().enableSingleRequest();
+    googletag.pubads().collapseEmptyDivs();
+    googletag.enableServices();
+  });
+</script>
+<script type="text/javascript">
+  googletag.cmd.push(function() {
+	var mappingWelcome = googletag.sizeMapping().
+    	addSize([0,0], [300, 250]).
+        addSize([640, 0], [640, 480]).
+        build();
+  
+    googletag.defineSlot('/62616433/main_welcome', [[640, 480], [300, 250]], 'div-gpt-ad-1430160889889-0').defineSizeMapping(mappingWelcome).addService(googletag.pubads());
+  	googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+        if(event.isEmpty === false && searchFor(event.slot, "/62616433/main_welcome") === true) {$('#div-gpt-ad-1430160889889-0').trigger('adready');} 
+    });
+	googletag.pubads().enableSingleRequest();
+    googletag.pubads().collapseEmptyDivs();  
+    googletag.enableServices();
+  });
+</script>
+<script type="text/javascript">
+  googletag.cmd.push(function() {
+    googletag.defineOutOfPageSlot('/62616433/main_wallpaper', 'div-gpt-ad-1430235245447-0').addService(googletag.pubads());
+  	googletag.pubads().addEventListener('slotRenderEnded', function(event) {
+        if(event.isEmpty === false && searchFor(event.slot, "/62616433/main_wallpaper") === true) {
+	        if ($('#wallpaperad').length) {
+	            var wa = $('#wallpaperad');
+	            var mh = $("main").height();
+	            wa.height(mh + 70);
+	        }
+            if($('.search-banner-form').length) {
+                var temp = $('#wallpaperad');
+    			if(temp) {temp.insertAfter($('.search-banner-form'));}
+            }
+        } 
+    });
+    googletag.pubads().enableSingleRequest();
+    googletag.pubads().collapseEmptyDivs();
+    googletag.enableServices();
+  });
+</script>
+<script type="text/javascript">
+  googletag.cmd.push(function() {
+    googletag.defineOutOfPageSlot('/62616433/main_native_ad_unit_1', 'div-gpt-ad-1441294234226-0').addService(googletag.pubads());
+    googletag.pubads().enableSingleRequest();
+    googletag.pubads().collapseEmptyDivs();
+    googletag.enableServices();
+  });
+</script>
+<script src="./Easier PCB Design_ Eagle CAD Tips and Tricks_files/jquery.popupoverlay.js"></script>
+<script>
+        $(document).ready(function() {
+
+            if($.cookie('aacwelcome') === undefined) {
+                if (popup_is_mobile() === false) {
+                    $('#my_popup').popup({
+                        color: 'white',
+                        opacity: 1,
+                        transition: '0.3s',
+                        scrolllock: true,
+                        beforeopen: function () {
+                            googletag.cmd.push(function () {googletag.display('div-gpt-ad-1430160889889-0');});
+                            $('#my_popup').removeClass("hidden");
+                        }
+                    });
+                    $('#div-gpt-ad-1430160889889-0').bind('adready', function () {
+                        var quotes = [{'author': 'James Kip Finch' , 'quote': 'The engineer has been, and is, a maker of history.'},
+                            {'author': 'Gordon Lindsay Glegg', 'quote': 'The scientist discovers a new type of material or energy and the engineer discovers a new use for it.'},
+                            {'author': 'Henry Petroski', 'quote': 'Engineering is achieving function while avoiding failure.'},
+                            {'author': 'Henry Petroski', 'quote': 'Successful engineering is all about understanding how things break or fail.'},
+                            {'author': 'Michio Kaku', 'quote': 'What we usually consider as impossible are simply engineering problems… there’s no law of physics preventing them.'},
+                            {'author': 'Thomas Edison', 'quote': 'I have not failed, but found 1000 ways to not make a light bulb.'},
+                            {'author': 'Robert Heinlein', 'quote': 'One man’s “magic” is another man’s engineering. “Supernatural” is a null word.'},
+                            {'author': 'Unknown', 'quote': 'Everyone wants the project to be good, fast, and cheap... pick two.'},
+                        ];
+                        var quote = quotes[Math.floor(Math.random()*quotes.length)];
+                        $('#welcomequote').text(quote.quote);
+                        $('#welcomeauthor').text(quote.author);                           
+                        $('#my_popup').popup('show');
+                    });
+                } else {
+                    $('#div-gpt-ad-1430160889889-0').detach().insertAfter('header');
+                    $('#div-gpt-ad-1430160889889-0').addClass('text-center');
+                    $('#div-gpt-ad-1430160889889-0').css({"padding-top": "20px", "padding-bottom": "20px", "background-color": "#f26b31"});
+                    googletag.cmd.push(function () {googletag.display('div-gpt-ad-1430160889889-0');});
+                }
+                var welcomeExpire = new Date();
+                welcomeExpire.setHours(welcomeExpire.getHours() + 6);
+                $.cookie('aacwelcome','set', {domain: "allaboutcircuits.com", path: "/", expires: welcomeExpire});
+           }
+        });
+    </script>
+<script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-1454132-1', 'auto');
+        ga('require', 'GTM-MMWSMVL');
+        ga('require', 'displayfeatures');
+        ga('set',{'dimension1':'eda,pcb,computers-peripherals,eda,pcb'});
+        ga('set',{'contentGroup1':'eda,pcb,computers-peripherals,eda,pcb'});
+        ga('send', 'pageview');
+
+    </script>
+
+<script>
+        !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+            n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+            document,'script','https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1808435332737507'); // Insert your pixel ID here.
+        fbq('track', 'PageView');
+        fbq('track', 'ViewContent', {
+            content_ids: ['eda','pcb','computers-peripherals','eda','pcb'],
+        content_type: 'category'
+        });
+    </script>
+<noscript><img height="1" width="1" style="display:none"
+                   src="https://www.facebook.com/tr?id=1808435332737507&ev=PageView&noscript=1"
+    /></noscript>
+
+
+<link rel="preload" href="https://adservice.google.com.au/adsid/integrator.js?domain=www.allaboutcircuits.com" as="script"><script type="text/javascript" src="https://adservice.google.com.au/adsid/integrator.js?domain=www.allaboutcircuits.com"></script><link rel="preload" href="https://adservice.google.com/adsid/integrator.js?domain=www.allaboutcircuits.com" as="script"><script type="text/javascript" src="https://adservice.google.com/adsid/integrator.js?domain=www.allaboutcircuits.com"></script><script src="https://securepubads.g.doubleclick.net/gpt/pubads_impl_203.js" async=""></script><style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
+.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
+.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_About.MathJax_MousePost {outline: none}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 5px 0px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; -khtml-border-radius: 5px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 1px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: .7em}
+.MathJax_MenuRadioCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuLabel {padding: 1px 2em 3px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #DDDDDD; margin: 4px 3px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: #606872; color: white}
+.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
+.MathJax_ContextMenu:focus {outline: none}
+.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
+#MathJax_AboutClose {top: .2em; right: .2em}
+.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
+.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
+.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
+.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_MenuClose:hover span {background-color: #CCC!important}
+.MathJax_MenuClose:hover:focus {outline: none}
+</style><style type="text/css">.MathJax_Preview .MJXf-math {color: inherit!important}
+</style><style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
+.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style type="text/css">.MJXp-script {font-size: .8em}
+.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
+.MJXp-bold {font-weight: bold}
+.MJXp-italic {font-style: italic}
+.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-largeop {font-size: 150%}
+.MJXp-largeop.MJXp-int {vertical-align: -.2em}
+.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
+.MJXp-display {display: block; text-align: center; margin: 1em 0}
+.MJXp-math span {display: inline-block}
+.MJXp-box {display: block!important; text-align: center}
+.MJXp-box:after {content: " "}
+.MJXp-rule {display: block!important; margin-top: .1em}
+.MJXp-char {display: block!important}
+.MJXp-mo {margin: 0 .15em}
+.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
+.MJXp-denom {display: inline-table!important; width: 100%}
+.MJXp-denom > * {display: table-row!important}
+.MJXp-surd {vertical-align: top}
+.MJXp-surd > * {display: block!important}
+.MJXp-script-box > *  {display: table!important; height: 50%}
+.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
+.MJXp-script-box > *:last-child > * {vertical-align: bottom}
+.MJXp-script-box > * > * > * {display: block!important}
+.MJXp-mphantom {visibility: hidden}
+.MJXp-munderover {display: inline-table!important}
+.MJXp-over {display: inline-block!important; text-align: center}
+.MJXp-over > * {display: block!important}
+.MJXp-munderover > * {display: table-row!important}
+.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
+.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
+.MJXp-mtr {display: table-row!important}
+.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
+.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-mlabeledtr {display: table-row!important}
+.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
+.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
+.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
+.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
+.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
+.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
+.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
+.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
+.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
+.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
+.MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style></head>
+<body><div id="MathJax_Message" style="display: none;"></div>
+<div id="top-box" class="hidden-xs">
+<div class="top-box-wrapper">
+<div class="container navContainer">
+<div class="row">
+<div class="social-box col-lg-3 col-md-4 col-sm-5 pull-right" itemscope="" itemtype="https://schema.org/Organization">
+<div class="hidden-print"><span class="hidden-xs">Connect with us</span>
+<link itemprop="url" href="https://www.allaboutcircuits.com/">
+<a href="https://www.facebook.com/allaboutcircuits" itemprop="sameAs" rel="me" target="_blank" class="socialpop" data-content="&lt;iframe src=&quot;https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fallaboutcircuits&amp;width=90&amp;layout=button_count&amp;action=like&amp;show_faces=false&amp;share=false&amp;height=20&amp;appId=421950967965311&quot; width=&quot;90&quot; height=&quot;20&quot; style=&quot;border:none;overflow:hidden&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; allowTransparency=&quot;true&quot;&gt;&lt;/iframe&gt;" data-original-title="" title=""><i class="fa fa-facebook"></i></a>
+<a href="https://twitter.com/AllAboutCircuit" itemprop="sameAs" rel="me" target="_blank" class="socialpop" data-content="&lt;iframe src=&quot;https://platform.twitter.com/widgets/follow_button.html?screen_name=allaboutcircuit&amp;show_screen_name=false&amp;show_count=true&amp;size=s&quot; title=&quot;Follow All About Circuits on Twitter&quot; width=&quot;160&quot; height=&quot;25&quot; style=&quot;border: 0; overflow: hidden;&quot;&gt;&lt;/iframe&gt;" data-original-title="" title=""><i class="fa fa-twitter"></i></a>
+<a href="https://www.youtube.com/c/AllAboutCircuitsVideo" itemprop="sameAs" rel="me" target="_blank" class="socialpop" data-content="&lt;iframe src=&quot;//sub.allaboutcircuits.com/youtube.html&quot; height=&quot;25&quot; width=&quot;120&quot; style=&quot;border:none;overflow:hidden&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; allowTransparency=&quot;true&quot;&gt;&lt;/iframe&gt;" data-original-title="" title=""><i class="fa fa-youtube-play"></i></a>
+<a href="https://www.linkedin.com/company/allaboutcircuits" itemprop="sameAs" rel="me" target="_blank" class="socialpop" data-content="&lt;iframe src=&quot;//sub.allaboutcircuits.com/linkedin.html&quot; height=&quot;20&quot; width=&quot;115&quot; style=&quot;border:none;overflow:hidden&quot; scrolling=&quot;no&quot; frameborder=&quot;0&quot; allowTransparency=&quot;true&quot;&gt;&lt;/iframe&gt;" data-original-title="" title=""><i class="fa fa-linkedin"></i></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="clearfix"></div>
+<header id="headerProxy">
+<nav id="main-nav" class="navbar yamm affix" role="navigation">
+<div class="container navContainer">
+<div class="row">
+<div class="navbar-header">
+
+<div class="resp-menu-wrap pull-right">
+<div class="search-block visible-xs pull-right" itemscope="" itemtype="https://schema.org/WebSite">
+<link itemprop="url" href="https://www.allaboutcircuits.com/">
+<form action="https://www.allaboutcircuits.com/search" method="GET" class="navbar-form navbar-form-mobile navbar-right " itemprop="potentialAction" itemscope="" itemtype="http://schema.org/SearchAction">
+<a href="https://www.allaboutcircuits.com/technical-articles/eagle-cad-tips-and-tricks/#" class="close">×</a>
+<i class="search-icon aaccon-search mobile-search"></i>
+<meta itemprop="target" content="https://www.allaboutcircuits.com/search?q={q}">
+<input type="text" name="q" value="" class="form-control" placeholder="Search" itemprop="query-input">
+</form>
+</div>
+<div class="user-menu-box pull-right movefront">
+<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#usernavbar" aria-expanded="false" aria-controls="navbar">
+<i class="fa fa-eetech-user"></i>
+</button>
+<div class="clearfix"></div>
+</div>
+<div class="resp-menu-box pull-right movefront">
+<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+
+<img src="./Easier PCB Design_ Eagle CAD Tips and Tricks_files/mobile-menu-v2.png" class="mobile-menu-icon">
+</button>
+<div class="clearfix"></div>
+</div>
+</div>
+<a class="navbar-brand" href="https://www.allaboutcircuits.com/">
+<img id="aac-logo-visible-lg" class="navLogo" alt="All About Circuits" src="./Easier PCB Design_ Eagle CAD Tips and Tricks_files/aac_logo.png">
+<img id="aac-logo-visible-sm" class="navLogo logo-icon" alt="All About Circuits" src="./Easier PCB Design_ Eagle CAD Tips and Tricks_files/aac_logo_icon.png">
+</a>
+
+
+</div>
+<div class="nav-block">
+<div class="search-block hidden-xs flx-item">
+<form action="https://www.allaboutcircuits.com/search" method="GET" id="topsearchform" class="navbar-form hidden-xs open open-default">
+<i class="search-icon aaccon-search desktop-search"></i>
+<input name="q" id="q" type="text" class="form-control" placeholder="Search" value="">
+</form>
+</div>
+<div id="navbar" class=" navbar-collapse collapse flx-item">
+<ul id="primary-menu" class="nav navbar-nav navbar-right pull-right " style="overflow: hidden; max-height: inherit;">
+<li id="articles_menu" class="dropdown yamm-fw">
+<a class="dropdown-toggle" data-toggle="dropdown" href="https://www.allaboutcircuits.com/technical-articles/eagle-cad-tips-and-tricks/#" role="button" aria-expanded="false">ARTICLES <i class="fa fa-chevron-down"></i></a>
+<ul class="dropdown-menu" role="menu">
+<div class="dropdown-content">
+<div class="container-fluid">
+<div class="row">
+<div class="col-lg-2 col-md-3 col-sm-3 category-box match-dp-menu">
+<ul id="articles_list" class="category-menu-filter list-unstyled" itemscope="" itemtype="https://www.schema.org/SiteNavigationElement">
+<li id="articles_latest" itemprop="name"><a href="https://www.allaboutcircuits.com/latest/" itemprop="url">LATEST</a></li>
+<li id="articles_news" itemprop="name"><a href="https://www.allaboutcircuits.com/news/" itemprop="url">NEWS</a></li>
+<li id="articles_projects" itemprop="name"><a href="https://www.allaboutcircuits.com/projects/" itemprop="url">PROJECTS</a></li>
+<li id="articles_technical_articles" itemprop="name"><a href="https://www.allaboutcircuits.com/technical-articles/" itemprop="url">TECHNICAL ARTICLES</a></li>
+ <li id="articles_new_industry_products" itemprop="name"><a href="https://www.allaboutcircuits.com/new-industry-products/" class="text-uppercase" itemprop="url">NEW INDUSTRY PRODUCTS</a></li>
+</ul>
+</div>
+<div class="menu-articles col-sm-9 col-md-9 col-lg-10 match-dp-menu hidden-xs" id="articles_main">
+</div>
+</div>
+</div>
+</div>
+</ul>
+</li>
+<li id="forums_menu" class="dropdown yamm-fw">
+<a class="dropdown-toggle dblclick" data-toggle="dropdown" href="https://forum.allaboutcircuits.com/" role="button" aria-expanded="false">Forum <i class="fa fa-chevron-down"></i></a>
+<ul class="dropdown-menu" role="menu">
+<div class="dropdown-content">
+<div class="container-fluid">
+<div class="row">
+<div class="col-lg-2 col-md-3 col-sm-3 category-box match-dp-menu">
+<ul id="forums_list" class="category-menu-filter list-unstyled" itemscope="" itemtype="https://www.schema.org/SiteNavigationElement">
+<li id="forums_all" itemprop="name"><a href="https://forum.allaboutcircuits.com/find-new/posts" itemprop="url">LATEST</a></li>
+<li id="forums_general" itemprop="name"><a href="https://forum.allaboutcircuits.com/#electronics.3" itemprop="url">GENERAL ELECTRONICS</a></li>
+<li id="forums_circuits_projects" itemprop="name"><a href="https://forum.allaboutcircuits.com/#circuits-and-projects.31" itemprop="url">CIRCUITS &amp; PROJECTS</a></li>
+<li id="forums_embedded_software" itemprop="name"><a href="https://forum.allaboutcircuits.com/#software-microcomputing.16" itemprop="url">EMBEDDED &amp; MICRO</a></li>
+<li id="forums_community" itemprop="name"><a href="https://forum.allaboutcircuits.com/#community.20" itemprop="url">COMMUNITY</a></li>
+</ul>
+</div>
+<div class="menu-articles col-sm-9 col-md-9 col-lg-10 match-dp-menu hidden-xs" id="forums_main"></div>
+</div>
+</div>
+</div>
+</ul>
+</li>
+<li id="education_menu" class="dropdown yamm-fw">
+<a class="dropdown-toggle dblclick" data-toggle="dropdown" href="https://www.allaboutcircuits.com/education" role="button" aria-expanded="false">
+Education <i class="fa fa-chevron-down"></i>
+</a>
+<ul class="dropdown-menu" role="menu">
+<div class="dropdown-content">
+<div class="container-fluid">
+<div class="row">
+<div class="col-lg-2 col-md-3 col-sm-3 category-box match-dp-menu">
+<ul id="education_list" class="category-menu-filter list-unstyled" itemscope="" itemtype="https://www.schema.org/SiteNavigationElement">
+<li id="education_textbook" itemprop="name"><a class="text-uppercase" href="https://www.allaboutcircuits.com/textbook/" itemprop="url">Textbooks</a></li>
+<li id="education_video_lectures" itemprop="name"><a class="text-uppercase" href="https://www.allaboutcircuits.com/video-lectures/" itemprop="url">Video Lectures</a></li>
+<li id="education_worksheets" itemprop="name"><a class="text-uppercase" href="https://www.allaboutcircuits.com/worksheets/" itemprop="url">Worksheets</a></li>
+<li id="education_webinars" itemprop="name"><a class="text-uppercase" href="https://www.allaboutcircuits.com/industry-webinars/" itemprop="url">Industry Webinars</a></li>
+<li id="education_training" itemprop="name"><a class="text-uppercase" href="https://www.allaboutcircuits.com/industry-training/" itemprop="url">Industry Training</a></li>
+</ul>
+</div>
+<div id="education_main" class="menu-articles col-sm-9 col-md-9 col-lg-10 match-dp-menu hidden-xs"></div>
+</div>
+</div>
+</div>
+</ul>
+</li>
+<li id="tools_menu" class="dropdown yamm-fw">
+<a class="dropdown-toggle dblclick" data-toggle="dropdown" href="https://www.allaboutcircuits.com/technical-articles/eagle-cad-tips-and-tricks/#" role="button" aria-expanded="false">
+Tools <i class="fa fa-chevron-down"></i>
+</a>
+<ul class="dropdown-menu" role="menu">
+<div class="dropdown-content">
+<div class="container-fluid">
+<div class="row">
+<div class="col-lg-2 col-md-3 col-sm-3 category-box match-dp-menu">
+<ul id="tools_list" class="category-menu-filter list-unstyled" itemscope="" itemtype="https://www.schema.org/SiteNavigationElement">
+<li id="tools_calculators" itemprop="name"><a class="text-uppercase" href="https://www.allaboutcircuits.com/tools/" itemprop="url">Calculators</a></li>
+<li id="tools_part_search" itemprop="name"><a class="text-uppercase" href="https://www.allaboutcircuits.com/electronic-components/" itemprop="url">Part Search</a></li>
+<li id="tools_test_measurement" itemprop="name"><a class="text-uppercase" href="https://www.allaboutcircuits.com/test-measurement/" itemprop="url">Test Equipment DB</a></li>
+<li id="tools_bom" itemprop="name"><a class="text-uppercase" href="https://www.allaboutcircuits.com/bom/" itemprop="url">BOM Tool</a></li>
+<li id="tools_datasheet" itemprop="name"><a class="text-uppercase" href="https://www.allaboutcircuits.com/electronic-components/manufacturer/" itemprop="url">Datasheet Search</a></li>
+</ul>
+</div>
+<div id="tools_main" class="menu-articles col-sm-9 col-md-9 col-lg-10 match-dp-menu hidden-xs"></div>
+</div>
+</div>
+</div>
+</ul>
+</li>
+<li id="topics_giveaways_menu" class="cat-menu-item yamm-fw hidden-sm">
+<a href="https://www.allaboutcircuits.com/giveaways/" class="dropdown-toggle dblclick nodropdown" data-toggle="dropdown" role="button" aria-expanded="false">Giveaways</a>
+</li>
+<li id="topics_iot_menu" class="cat-menu-item hidden-sm  hidden-md yamm-fw">
+<a href="https://www.allaboutcircuits.com/test-measurement/" class="dropdown-toggle dblclick nodropdown" data-toggle="dropdown" role="button" aria-expanded="false">Test Db <img src="./Easier PCB Design_ Eagle CAD Tips and Tricks_files/beta.png" class="beta-search hidden-xs" alt="Test &amp; Measurement Db Beta"></a>
+</li>
+<li id="topics_part_search_menu" class="cat-menu-item hidden-sm  hidden-md yamm-fw">
+<a href="https://www.allaboutcircuits.com/electronic-components/" class="dropdown-toggle dblclick nodropdown" data-toggle="dropdown" role="button" aria-expanded="false" title="Electronics Part Search">Part Search</a>
+</li>
+<li class="login-menu-item dropdown hidden-xs">
+<a href="https://www.allaboutcircuits.com/technical-articles/eagle-cad-tips-and-tricks/#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">LOG IN / JOIN</a>
+<ul class="dropdown-menu" role="menu">
+<li><a href="https://www.allaboutcircuits.com/login/" title="Login to your existing account">Log In</a></li>
+<li><a href="https://forum.allaboutcircuits.com/register" title="Create an account">Join AAC</a></li>
+<li><a href="https://www.allaboutcircuits.com/login/" title="Sign in with your Facebook, Linkedin or Google account">Sign in with <i class="fa fa-facebook"></i> <i class="fa fa-linkedin"></i><i class="fa fa-google-plus"></i></a></li>
+<li><a href="https://forum.allaboutcircuits.com/register">Member Benefits</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="usernavbar" class="navbar-collapse collapse">
+<ul id="primary-menu" class="nav navbar-nav visible-xs navbar-right pull-right">
+<li><a href="https://www.allaboutcircuits.com/login/">Log In</a></li>
+<li><a href="https://forum.allaboutcircuits.com/register">Join AAC</a></li>
+<li><a href="https://www.allaboutcircuits.com/login/">Sign in with &nbsp;<i class="fa fa-facebook"></i>&nbsp;<i class="fa fa-linkedin"></i>&nbsp;<i class="fa fa-google-plus"></i></a></li>
+<li><a href="https://forum.allaboutcircuits.com/register">Member Benefits</a></li>
+</ul>
+</div>
+</div>
+</div>
+</nav>
+<div class="clearfix"></div>
+</header>
+<main class="row-offcanvas row-offcanvas-right">
+<section class="single-post">
+<div class="container">
+<div class="row rowtable">
+<div class="col-lg-9 col-md-8 col-sm-12 main-content block-1" data-mh="block-1" style="height: 10773px;">
+<div class="breadcrumb-wrap hidden-xs">
+<ol class="breadcrumb">
+<li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="https://www.allaboutcircuits.com/" itemprop="url"><span itemprop="title"><i class="fa fa-home"></i> Home</span></a></li>
+<li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="https://www.allaboutcircuits.com/technical-articles/" itemprop="url"><span itemprop="title">Technical Articles</span></a></li>
+<li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb" class="active"><meta itemprop="url" content="https://www.allaboutcircuits.com/technical-articles/eagle-cad-tips-and-tricks/"><span itemprop="title">Easier PCB Design: Eagle CAD Tips and Tricks</span></li>
+</ol>
+</div> 
+<article itemscope="itemscope" itemtype="https://schema.org/TechArticle">
+<meta itemscope="" itemprop="mainEntityOfPage" itemtype="https://schema.org/WebPage" itemid="https://www.allaboutcircuits.com/technical-articles/eagle-cad-tips-and-tricks/">
+<meta itemprop="description" content="Most hobbyists and many professionals use Eagle CAD as a daily tool in designing schematics and laying out PCB. You&#39;re going to learn some tips and tricks for using Eagle CAD, which will make your work much easier and faster. ">
+<div class="hidden" itemprop="image" itemscope="" itemtype="https://schema.org/ImageObject">
+<meta itemprop="url" content="https://www.allaboutcircuits.com/uploads/thumbnails/EAGLE_CAD_screen_shot.jpg">
+<meta itemprop="width" content="700">
+<meta itemprop="height" content="350">
+</div>
+<div class="hidden" itemprop="publisher" itemscope="" itemtype="https://schema.org/Organization">
+<div itemprop="logo" itemscope="" itemtype="https://schema.org/ImageObject">
+<meta itemprop="url" content="https://www.allaboutcircuits.com/assets/images/og_default.png">
+<meta itemprop="width" content="960">
+<meta itemprop="height" content="960">
+</div>
+<meta itemprop="name" content="All About Circuits">
+</div>
+<div class="page-header">
+<h1 id="11834" itemprop="headline">Easier PCB Design: Eagle CAD Tips and Tricks</h1>
+<p class="meta"><span itemprop="datePublished">May 09, 2016</span>
+<span>by</span>
+<span itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+<span itemprop="name"><a class="author" href="https://www.allaboutcircuits.com/author/yahya-tawil" itemprop="url">Yahya Tawil</a></span>
+</span>
+
+</p></div>
+<hr>
+
+
+<div id="div-gpt-ad-1430160961981-0" class="leaderboard_ad">
+<script type="text/javascript">
+		googletag.cmd.push(function() {googletag.display('div-gpt-ad-1430160961981-0');});
+	</script>
+</div>
+<div itemprop="articleBody">
+<div class="sp-content-block">
+<div class="lead" itemprop="headline">Most hobbyists and many professionals use Eagle CAD as a daily tool in designing schematics and laying out PCB. I’m going to share with you the most important tips and tricks for using Eagle CAD, which make my work much easier and faster. </div><h3>Tip #1: Keep One Hand on the Keyboard, One on the Mouse</h3><p>I see a lot of friends and colleagues use the&nbsp;mouse as their&nbsp;main tool for routing and selecting tools in the sidebar, but it’s much easier and faster to use the command line whenever you can.</p>
+<p>By using your keyboard, you will omit the time you spend searching for the desired icon and moving mouse pointer back and forth.</p>
+<p>My advice is to keep one hand&nbsp;on the&nbsp;mouse to do wiring, etc. inside the editor workspace&nbsp;and use the other hand on the&nbsp;keyboard to write commands and select tools. My advice of using the&nbsp;keyboard is not&nbsp;only for selecting tools. You will see the other benefits of using the&nbsp;keyboard in Eagle CAD in the rest of this series.</p>
+<p>It can be difficult to remember the spelling and the name of every tool. The good news that the command line only needs the smallest accepted spelling to select the tool for you, so you don’t have to write down the complete word.</p>
+<p><br>
+<img alt="Command Line " src="./Easier PCB Design_ Eagle CAD Tips and Tricks_files/cmdEagle.png" style="float: left; width: 644px; height: 439px; border: solid 1px #CDCDCD"></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>The table below shows the most-used tools and their corresponding shortest commands. To avoid duplication, the common tools between the schematic and board will not be listed twice:</p>
+<p>&nbsp;</p>
+<div class="table-responsive">
+<table class="table table-bordered" summary="Schematic Editor ">
+<caption>
+<p><strong>Schematic Editor</strong></p>
+</caption>
+<tbody>
+<tr>
+<td><strong>Tool Name </strong></td>
+<td><strong>Command (All accepted for command editor)</strong></td>
+</tr>
+<tr>
+<td>Add element to schematic</td>
+<td>a,ad,add</td>
+</tr>
+<tr>
+<td>Net</td>
+<td>ne,Net</td>
+</tr>
+<tr>
+<td>Move</td>
+<td>Mov,move</td>
+</tr>
+<tr>
+<td>Copy</td>
+<td>Cop,copy</td>
+</tr>
+<tr>
+<td>Name</td>
+<td>n,na,nam,name</td>
+</tr>
+<tr>
+<td>Value</td>
+<td>v,va,value</td>
+</tr>
+<tr>
+<td>Label</td>
+<td>l,la,lab,labe,label</td>
+</tr>
+<tr>
+<td>Text</td>
+<td>T,tex,text</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>&nbsp;</p>
+<div class="table-responsive">
+<table class="table table-bordered" summary="Board Editor ">
+<caption>
+<p><strong>Board Editor </strong></p>
+</caption>
+<tbody>
+<tr>
+<td><strong>Tool Name </strong></td>
+<td><strong>Command (All accepted for command editor)</strong></td>
+</tr>
+<tr>
+<td>Route</td>
+<td>rou,rout,route</td>
+</tr>
+<tr>
+<td>Ripup</td>
+<td>ri,rip,ripu,ripup</td>
+</tr>
+<tr>
+<td>Via</td>
+<td>Vi,via</td>
+</tr>
+<tr>
+<td>Ratsnest</td>
+<td>r,ra,rat,rasts,ratsn,ratsne,ratsnest</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>&nbsp;</p>
+<p>Other useful and exclusive uses of the keyboard can be mapped as below (just two examples for now):</p>
+<p>&nbsp;</p>
+<p><strong>1- Text Tool:</strong></p>
+<p>When you select the text tool, you write your sentence in the pop-up window&nbsp;and then drop it wherever you want. But what if you want to add more?</p>
+<p>In this case, just write down your sentence&nbsp;and hit enter without needing to select the text tool icon again.</p>
+<p>&nbsp;</p>
+<p><img alt="Text Tool with Keyboard" src="./Easier PCB Design_ Eagle CAD Tips and Tricks_files/Text.gif" style="width: 819px; height: 462px; border: solid 1px #CDCDCD"></p>
+<p>&nbsp;</p>
+<p><strong>2- Show Tool:</strong></p>
+<p>This tool is used exclusively with the&nbsp;keyboard. You need to enter the element name using the command line to highlight it. For example:</p>
+<p>&gt;Show R1</p>
+<p>Or</p>
+<p>&gt;Show R1* (to show all elements start with R1)</p>
+<p>This applies also for signal&nbsp;names.</p>
+<p><br>
+<img alt="Show Tool with Keyboard" src="./Easier PCB Design_ Eagle CAD Tips and Tricks_files/showc1.gif" style="width: 828px; height: 467px; border: solid 1px #CDCDCD"></p>
+<p>&nbsp;</p>
+<p><img alt="Show Tool between schematic and PCB" src="./Easier PCB Design_ Eagle CAD Tips and Tricks_files/showc1.png" style="width: 832px; height: 467px; border: solid 1px #CDCDCD" title="Show Tool between schematic and PCB"></p>
+<p>&nbsp;</p>
+<p><strong>3- Others:</strong></p>
+<p>To keep you excited (and to make things more organized), I will delay talking about other tools that are exclusively used with the&nbsp;command line to their respective tip/trick.</p><p>&nbsp;</p><h3>Tip #2: Use Your Mouse Effectively </h3><p>There are many practical uses of the mouse in Eagle CAD, more than just using it as a pointer:</p>
+<p>&nbsp;</p>
+<p><strong>1- Changing Layer Using the Scroll Button:</strong></p>
+<p>Let's say you are routing your PCB. A lot of people used to change the layer of an&nbsp;object using the layers drop-down menu.</p>
+<p>However, by using the mouse, you can change the layer by pressing the scroll button.</p>
+<p>&nbsp;</p>
+<p><img alt="Change Layer using scroll button " src="./Easier PCB Design_ Eagle CAD Tips and Tricks_files/change_layer_m.png" style="width: 739px; height: 415px; border: solid 1px #CDCDCD"></p>
+<p>&nbsp;</p>
+<p><strong>2- Change Wire Bend Styles:</strong></p>
+<p>Changing wire bend styles is one of the most common processes while routing.</p>
+<p>The hard way is to change styles by selecting the wire bend style from upper toolbar every time. The easy way is by pressing the right mouse button.</p>
+<p>You can see&nbsp;the practice of the past two mouse usages in the gif below:</p>
+<p>&nbsp;</p>
+<p><img alt="Change wire bend style using mouse left button " src="./Easier PCB Design_ Eagle CAD Tips and Tricks_files/changelayerbend.gif" style="width: 806px; height: 455px; border: solid 1px #CDCDCD"></p><p>&nbsp;</p><h3>Tip #3: Hit RATSNEST to Know How Many Signals Are Still Unrouted</h3><p>By pressing RATSNEST, the number of unrouted wires (airwires) is shown in the bottom-left corner of the editor.</p>
+<p>This feature is very useful for double-checking that you didn't miss&nbsp;any airwires, especially since sometimes you may not notice them when&nbsp;searching visually.</p>
+<p>&nbsp;</p>
+<p><img alt="Show number of airwires " src="./Easier PCB Design_ Eagle CAD Tips and Tricks_files/ratsnestnum.jpg" style="width: 341px; height: 93px; border: solid 1px #CDCDCD"></p><p>&nbsp;</p><h3>Tip #4: Make the Help Manual Your Friend </h3><p>Whenever you want to learn more about the tool you're using, press F1 and read about it!</p>
+<p>You will find really handy hidden usages of each tool in the manual.</p>
+<hr>
+<p>&nbsp;</p>
+<p>And now for the "tricks"!</p><p>&nbsp;</p><h3>Trick #1: Change Wire Width without Moving Your Mouse </h3><p>You can change&nbsp;the wire width without going to the width menu! Just write the width number and hit enter while you're holding the wire.</p>
+<p>&nbsp;</p>
+<p><img alt="change wire width" src="./Easier PCB Design_ Eagle CAD Tips and Tricks_files/changewidth.gif" style="width: 847px; height: 478px; border: solid 1px #CDCDCD"></p><p>&nbsp;</p><h3>Trick #2: Hide Any Unrouted Wires You Want</h3><p>The most annoying signal that contributes to a feeling of incompleteness and complexity is the GND signal.</p>
+<p>You could hide it, or any other signal, by using the RATSNEST command in this form:</p>
+<p>&gt;ratsnest ! <signal_name_here></signal_name_here></p>
+<p>For example:</p>
+<p>&gt;ratsnest ! GND</p>
+<p>To make it visible again just omit ‘!’:</p>
+<p>&gt;ratsnest GND</p>
+<p>&nbsp;</p>
+<p><img alt="Hide airewire" src="./Easier PCB Design_ Eagle CAD Tips and Tricks_files/hideairwire.gif" style="width: 777px; height: 404px; border: solid 1px #CDCDCD"></p><p>&nbsp;</p><h3>Trick #3: Turn Polygons Off </h3><p>Let's say you've drawn a power polygon, like VCC or GND, and now you need to change some routes. Polygons become very annoying in this case because whenever you hit RATSNEST, a polygon&nbsp;will fill the PCB again.</p>
+<p>You can keep working without polygons until you want to enable them again. Without deleting them, you can just turn them on or off as you like.</p>
+<p>To turn polygons off, select ripup tool, ripup polygon, then write this command:</p>
+<p>&gt;set poly off</p>
+<p>To turn them on, type this command:</p>
+<p>&gt;set poly on</p>
+<p><br>
+<img alt="Turn Polygon On/OFF" src="./Easier PCB Design_ Eagle CAD Tips and Tricks_files/turnpolyonoff.gif" style="width: 772px; height: 401px; border: solid 1px #CDCDCD"></p><p>&nbsp;</p>
+<div class="table-responsive">
+<table class="ce-table table">
+<thead>
+<tr><th>Tool Name</th><th> Command (All accepted for command editor)</th></tr>
+</thead>
+<tbody>
+<tr><td>Add element to schematic</td><td>a,ad,add</td></tr>
+<tr><td>Net</td><td>ne,Net</td></tr>
+<tr><td>Move</td><td>Mov,move</td></tr>
+<tr><td>Copy</td><td>Cop,copy</td></tr>
+<tr><td>Name</td><td>n,na,nam,name</td></tr>
+<tr><td>Value</td><td>v,va,value</td></tr>
+<tr><td>Label</td><td>l,la,lab,labe,label</td></tr>
+<tr><td>ext</td><td>T,tex,text</td></tr>
+</tbody>
+</table>
+</div>
+<div class="table-responsive">
+<table class="ce-table table">
+<thead>
+<tr><th>Tool Name</th><th>Command (All accepted for command editor)</th></tr>
+</thead>
+<tbody>
+<tr><td>Route</td><td>rou,rout,route</td></tr>
+<tr><td>Ripup</td><td>ri,rip,ripu,ripup</td></tr>
+<tr><td>Via</td><td>Vi,via</td></tr>
+<tr><td>Ratsnest</td><td> r,ra,rat,rasts,ratsn,ratsne,ratsnest</td></tr>
+</tbody>
+</table>
+</div>
+<p><strong>Next Article in Series: <a href="https://www.allaboutcircuits.com/technical-articles/eagle-cad-tips-and-tricks-part-2/" rel="next" target="_blank">Easier PCB Design: Eagle CAD Tips and Tricks Part 2</a></strong></p><p>&nbsp;</p>
+</div>
+<div class="meta-tags hidden-print">
+<h4 class="pull-left"><b>Learn More About:</b></h4>
+<div class="tags pull-left" itemprop="keywords">
+<a data-href="/search?q=pcb layout" rel="nofollow" class="jslink tag" onclick="ga(&#39;send&#39;,&#39;event&#39;,&#39;learn more about&#39;,&#39;pcb layout&#39;, &#39;https://www.allaboutcircuits.com/technical-articles/eagle-cad-tips-and-tricks&#39;);">pcb layout</a>
+<a data-href="/search?q=schematic" rel="nofollow" class="jslink tag" onclick="ga(&#39;send&#39;,&#39;event&#39;,&#39;learn more about&#39;,&#39;schematic&#39;, &#39;https://www.allaboutcircuits.com/technical-articles/eagle-cad-tips-and-tricks&#39;);">schematic</a>
+<a data-href="/search?q=schematic capture" rel="nofollow" class="jslink tag" onclick="ga(&#39;send&#39;,&#39;event&#39;,&#39;learn more about&#39;,&#39;schematic capture&#39;, &#39;https://www.allaboutcircuits.com/technical-articles/eagle-cad-tips-and-tricks&#39;);">schematic capture</a>
+<a data-href="/search?q=eagle" rel="nofollow" class="jslink tag" onclick="ga(&#39;send&#39;,&#39;event&#39;,&#39;learn more about&#39;,&#39;eagle&#39;, &#39;https://www.allaboutcircuits.com/technical-articles/eagle-cad-tips-and-tricks&#39;);">eagle</a>
+<a data-href="/search?q=tips" rel="nofollow" class="jslink tag" onclick="ga(&#39;send&#39;,&#39;event&#39;,&#39;learn more about&#39;,&#39;tips&#39;, &#39;https://www.allaboutcircuits.com/technical-articles/eagle-cad-tips-and-tricks&#39;);">tips</a>
+<a data-href="/search?q=tricks" rel="nofollow" class="jslink tag" onclick="ga(&#39;send&#39;,&#39;event&#39;,&#39;learn more about&#39;,&#39;tricks&#39;, &#39;https://www.allaboutcircuits.com/technical-articles/eagle-cad-tips-and-tricks&#39;);">tricks</a>
+</div>
+<div class="clearfix">&nbsp;</div>
+</div>
+</div>
+<div class="social-media-shares hidden-print">
+<div class="item">
+<div class="facebook">
+<a href="https://www.facebook.com/sharer/sharer.php?u=https://www.allaboutcircuits.com/technical-articles/eagle-cad-tips-and-tricks/" onclick="javascript:window.open(this.href, &#39;&#39;, &#39;menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600&#39;); ga(&#39;send&#39;, &#39;event&#39;, &#39;social-share&#39;, &#39;facebook&#39;,window.location.href)" ;="" return="" false;"="" target="_blank" title="Share on Facebook">
+<i class="fa fa-facebook"></i><span class="counter hidden-sm hidden-xs">Share</span>
+</a>
+</div>
+</div>
+<div class="item">
+<div class="twitter">
+<a href="https://twitter.com/share?url=https://www.allaboutcircuits.com/technical-articles/eagle-cad-tips-and-tricks/&amp;via=allaboutcircuit" onclick="javascript:window.open(this.href, &#39;&#39;, &#39;menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600&#39;); ga(&#39;send&#39;, &#39;event&#39;, &#39;social-share&#39;, &#39;twitter&#39;,window.location.href)" ;return="" false;"="" target="_blank" title="Share on Twitter">
+<i class="fa fa-twitter"></i><span class="counter hidden-sm hidden-xs">Share</span>
+</a>
+</div>
+</div>
+<div class="item">
+<div class="google-plus">
+<a href="https://plus.google.com/share?url=https://www.allaboutcircuits.com/technical-articles/eagle-cad-tips-and-tricks/" onclick="javascript:window.open(this.href, &#39;&#39;, &#39;menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=350,width=480&#39;); ga(&#39;send&#39;, &#39;event&#39;, &#39;social-share&#39;, &#39;google&#39;,window.location.href)" ;return="" false;"="" target="_blank" title="Share on Google+">
+<i class="fa fa-google-plus"></i><span class="counter hidden-sm hidden-xs">Share</span>
+</a>
+</div>
+</div>
+<div class="item">
+<div class="linkedin">
+<a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.allaboutcircuits.com/technical-articles/eagle-cad-tips-and-tricks/" onclick="javascript:window.open(this.href, &#39;&#39;, &#39;menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600&#39;); ga(&#39;send&#39;, &#39;event&#39;, &#39;social-share&#39;, &#39;linkedin&#39;,window.location.href)" ;return="" false;"="" target="_blank" title="Share on Linkedin">
+<i class="fa fa-linkedin"></i><span class="counter hidden-sm hidden-xs">Share</span>
+</a>
+</div>
+</div>
+<div class="item">
+<div class="reddit">
+<a href="https://www.reddit.com/submit?url=&amp;url=https://www.allaboutcircuits.com/technical-articles/eagle-cad-tips-and-tricks/&amp;title=Easier%20PCB%20Design:%20Eagle%20CAD%20Tips%20and%20Tricks" onclick="javascript:window.open(this.href, &#39;&#39;, &#39;menubar=no,toolbar=no,resizable=yes,scrollbars=yes&#39;); ga(&#39;send&#39;, &#39;event&#39;, &#39;social-share&#39;, &#39;reddit&#39;,window.location.href)" ;return="" false;"="" target="_blank" title="Share on Reddit">
+<i class="fa fa-reddit-alien"></i><span class="counter hidden-sm hidden-xs">Share</span>
+</a>
+</div>
+</div>
+</div>
+<div class="container-fluid other-articles hidden-print">
+<div id="relatedarticles" class="row">
+<h3><strong>You May Also Like:</strong></h3>
+</div>
+<div class="main-recommended-articles">
+<div class="row article-item" id="recommended_1">
+<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+<div class="col-md-2 col-sm-2 col-xs-2 darken">
+<a href="https://www.allaboutcircuits.com/technical-articles/easier-pcb-design-eagle-cad-tips-and-tricks-part-3/" title="Easier PCB Design: Eagle CAD Tips and Tricks Part 3" onclick="ga(&#39;send&#39;,&#39;event&#39;,&#39;recommended article click&#39;,&#39;main site&#39;, &#39;https://www.allaboutcircuits.com/technical-articles/eagle-cad-tips-and-tricks&#39;);"><img src="./Easier PCB Design_ Eagle CAD Tips and Tricks_files/Tawil_EagleCAD_3_featured.jpg" alt="" class="" align="left"></a>
+</div>
+<div class="col-lg-10 col-md-9 col-sm-9 col-xs-8 no-padding truncated" style="word-wrap: break-word;">
+<a href="https://www.allaboutcircuits.com/technical-articles/easier-pcb-design-eagle-cad-tips-and-tricks-part-3/" title="Easier PCB Design: Eagle CAD Tips and Tricks Part 3" onclick="ga(&#39;send&#39;,&#39;event&#39;,&#39;recommended article click&#39;,&#39;main site&#39;, &#39;https://www.allaboutcircuits.com/technical-articles/eagle-cad-tips-and-tricks&#39;);">
+<h4 class="article-title">Easier PCB Design: Eagle CAD Tips and Tricks Part 3</h4>
+<div class="excerpt hidden-xs">More important tips and tricks for using Eagle CAD to help make your work much easier and faster.</div>
+</a>
+</div>
+</div>
+<div class="col-lg-3 col-md-3 col-sm-3 hidden-xs article-meta-info">
+<div class="col-lg-12 meta-article-author" data-article-author="Yahya Tawil"><h4><a href="https://www.allaboutcircuits.com/author/yahya-tawil">Yahya Tawil</a></h4></div>
+<div class="col-lg-12 meta-article-date" data-article-published="April 10, 2017">April 10, 2017</div>
+</div>
+</div>
+<div class="row article-item" id="recommended_2">
+<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+<div class="col-md-2 col-sm-2 col-xs-2 darken">
+<a href="https://www.allaboutcircuits.com/news/an-introduction-to-the-texas-instruments-webench/" title="A Walkthrough of the Texas Instruments WEBENCH" onclick="ga(&#39;send&#39;,&#39;event&#39;,&#39;recommended article click&#39;,&#39;main site&#39;, &#39;https://www.allaboutcircuits.com/technical-articles/eagle-cad-tips-and-tricks&#39;);"><img src="./Easier PCB Design_ Eagle CAD Tips and Tricks_files/Hughes_WEBENCH_featured.jpg" alt="" class="" align="left"></a>
+</div>
+<div class="col-lg-10 col-md-9 col-sm-9 col-xs-8 no-padding truncated" style="word-wrap: break-word;">
+<a href="https://www.allaboutcircuits.com/news/an-introduction-to-the-texas-instruments-webench/" title="A Walkthrough of the Texas Instruments WEBENCH" onclick="ga(&#39;send&#39;,&#39;event&#39;,&#39;recommended article click&#39;,&#39;main site&#39;, &#39;https://www.allaboutcircuits.com/technical-articles/eagle-cad-tips-and-tricks&#39;);">
+<h4 class="article-title">A Walkthrough of the Texas Instruments WEBENCH</h4>
+<div class="excerpt hidden-xs">TI offers a variety of design tools. The WEBENCH Power Designer provides end to end solutions for your single and multiple power design...</div>
+</a>
+</div>
+</div>
+<div class="col-lg-3 col-md-3 col-sm-3 hidden-xs article-meta-info">
+<div class="col-lg-12 meta-article-author" data-article-author="Mark Hughes"><h4><a href="https://www.allaboutcircuits.com/author/mark-hughes">Mark Hughes</a></h4></div>
+<div class="col-lg-12 meta-article-date" data-article-published="August 06, 2016">August 06, 2016</div>
+</div>
+</div>
+<div class="row article-item" id="recommended_3">
+<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+<div class="col-md-2 col-sm-2 col-xs-2 darken">
+<a href="https://www.allaboutcircuits.com/technical-articles/five-places-to-find-part-info-online/" title="Five Places to Find Part Info Online" onclick="ga(&#39;send&#39;,&#39;event&#39;,&#39;recommended article click&#39;,&#39;main site&#39;, &#39;https://www.allaboutcircuits.com/technical-articles/eagle-cad-tips-and-tricks&#39;);"><img src="./Easier PCB Design_ Eagle CAD Tips and Tricks_files/ti-ttl-databook.jpg" alt="" class="" align="left"></a>
+</div>
+<div class="col-lg-10 col-md-9 col-sm-9 col-xs-8 no-padding truncated" style="word-wrap: break-word;">
+<a href="https://www.allaboutcircuits.com/technical-articles/five-places-to-find-part-info-online/" title="Five Places to Find Part Info Online" onclick="ga(&#39;send&#39;,&#39;event&#39;,&#39;recommended article click&#39;,&#39;main site&#39;, &#39;https://www.allaboutcircuits.com/technical-articles/eagle-cad-tips-and-tricks&#39;);">
+<h4 class="article-title">Five Places to Find Part Info Online</h4>
+<div class="excerpt hidden-xs">These online sources not only help you find part data quickly, but can also help you determine availability and manage bills of materials.</div>
+</a>
+</div>
+</div>
+<div class="col-lg-3 col-md-3 col-sm-3 hidden-xs article-meta-info">
+<div class="col-lg-12 meta-article-author" data-article-author="Dan Romanchik"><h4><a href="https://www.allaboutcircuits.com/author/dan-romanchik">Dan Romanchik</a></h4></div>
+<div class="col-lg-12 meta-article-date" data-article-published="June 25, 2015">June 25, 2015</div>
+</div>
+</div>
+<div class="row article-item" id="recommended_4">
+<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+<div class="col-md-2 col-sm-2 col-xs-2 darken">
+<a href="https://www.allaboutcircuits.com/technical-articles/designing-for-manufacturability/" title="Designing for Manufacturability" onclick="ga(&#39;send&#39;,&#39;event&#39;,&#39;recommended article click&#39;,&#39;main site&#39;, &#39;https://www.allaboutcircuits.com/technical-articles/eagle-cad-tips-and-tricks&#39;);"><img src="./Easier PCB Design_ Eagle CAD Tips and Tricks_files/EDA_Screenshot.png" alt="" class="" align="left"></a>
+</div>
+<div class="col-lg-10 col-md-9 col-sm-9 col-xs-8 no-padding truncated" style="word-wrap: break-word;">
+<a href="https://www.allaboutcircuits.com/technical-articles/designing-for-manufacturability/" title="Designing for Manufacturability" onclick="ga(&#39;send&#39;,&#39;event&#39;,&#39;recommended article click&#39;,&#39;main site&#39;, &#39;https://www.allaboutcircuits.com/technical-articles/eagle-cad-tips-and-tricks&#39;);">
+<h4 class="article-title">Designing for Manufacturability</h4>
+<div class="excerpt hidden-xs">A guideline for proper considerations when making electrical platforms that can be easily, cheaply, and quickly manufactured. The purpose...</div>
+</a>
+</div>
+</div>
+<div class="col-lg-3 col-md-3 col-sm-3 hidden-xs article-meta-info">
+<div class="col-lg-12 meta-article-author" data-article-author="Trent Ziemer"><h4><a href="https://www.allaboutcircuits.com/author/trent-ziemer">Trent Ziemer</a></h4></div>
+<div class="col-lg-12 meta-article-date" data-article-published="August 26, 2015">August 26, 2015</div>
+</div>
+</div>
+</div>
+<br>
+<p class="text-center"><strong><a href="https://www.allaboutcircuits.com/latest/" onclick="ga(&#39;send&#39;,&#39;event&#39;,&#39;recommended article click&#39;,&#39;main site&#39;, &#39;load more&#39;);"><i class="fa fa-arrow-down"></i> Load More</a></strong></p>
+</div>
+<h3 id="comments-control" class="hidden-print"><a href="https://www.allaboutcircuits.com/technical-articles/eagle-cad-tips-and-tricks/#"><b>Comments</b><i class="fa fa-chevron-up"></i></a></h3>
+<div id="comments-wrap" class="disqus-theme comments-box collapse in hidden-print">
+<h4><span><b itemprop="commentCount">
+5 Comments</b></span><a href="https://www.allaboutcircuits.com/login/" class="pull-right login"><i class="fa fa-comment"></i>Login</a></h4>
+<hr>
+<div class="row">
+<div id="comments" class="col-sm-12">
+<form id="main-form" method="post" action="https://www.allaboutcircuits.com/">
+<div class="hiddenFields">
+<input type="hidden" name="ACT" value="25">
+<input type="hidden" name="RET" value="https://www.allaboutcircuits.com/technical-articles/eagle-cad-tips-and-tricks">
+<input type="hidden" name="URI" value="technical-articles/eagle-cad-tips-and-tricks">
+<input type="hidden" name="entry_id" value="36406">
+<input type="hidden" name="parent_id" value="0">
+<input type="hidden" name="site_id" value="1">
+<input type="hidden" name="csrf_token" value="cc3c1a696ebc214d866e9249ef95abc0fbdd914e">
+</div>
+<div class="form-group clearfix">
+<textarea style="resize:vertical;" placeholder="Please login before you can comment." readonly="" name="comment" rows="4" class="form-control comment-comment"></textarea>
+<input type="button" disabled="true" id="submitComment" value="Submit" class="commentButton btn btn-theme pull-right" style="margin-top:5px;">
+</div></form>
+<ul class="threads" itemscope="" itemtype="https://schema.org/UserComments">
+<li class="media">
+<div class="pull-left commentAvatar">
+<a href="https://forum.allaboutcircuits.com/userProfile.php?user=Anas%20Abo%20Hyleh">
+<img src="./Easier PCB Design_ Eagle CAD Tips and Tricks_files/avatar.php" height="40px" width="40px" alt="Anas Abo Hyleh&#39;s avatar">
+</a>
+</div>
+<div class="media-body">
+<div class="media-heading">
+<a href="https://forum.allaboutcircuits.com/userProfile.php?user=Anas%20Abo%20Hyleh" class="name"><b itemprop="name">Anas Abo Hyleh</b></a>
+<span class="date" itemprop="commentTime">2016-05-09</span>
+</div>
+<div class="article-comment" itemprop="commentText"><p>Great Article!</p></div>
+<div class="meta">
+<a href="https://www.allaboutcircuits.com/technical-articles/eagle-cad-tips-and-tricks/#" class="reply" rel="1043">Reply</a>
+</div>
+</div>
+</li>
+<ul class="media-list replies">
+<li class="media">
+<div class="pull-left commentAvatar">
+<a href="https://forum.allaboutcircuits.com/userProfile.php?user=Yahya%20Tawil">
+<img src="./Easier PCB Design_ Eagle CAD Tips and Tricks_files/avatar(1).php" height="40px" width="40px" alt="Yahya Tawil&#39;s avatar">
+</a>
+</div>
+<div class="media-body">
+<div class="media-heading">
+<a href="https://forum.allaboutcircuits.com/userProfile.php?user=Yahya%20Tawil" class="name"><b itemprop="name">Yahya Tawil</b></a>
+<span class="date" itemprop="commentTime">2016-05-09</span>
+</div>
+<div class="article-comment" itemprop="commentText"><p>Thanks Anas <img src="./Easier PCB Design_ Eagle CAD Tips and Tricks_files/smile.gif" width="19" height="19" alt="smile" style="border:0;"></p></div>
+<div class="meta">
+<a href="https://www.allaboutcircuits.com/technical-articles/eagle-cad-tips-and-tricks/#" class="reply" rel="1046">Reply</a>
+</div>
+</div>
+</li>
+</ul>
+<li class="media">
+<div class="pull-left commentAvatar">
+<a href="https://forum.allaboutcircuits.com/userProfile.php?user=MaggieQQ">
+<img src="./Easier PCB Design_ Eagle CAD Tips and Tricks_files/avatar(2).php" height="40px" width="40px" alt="MaggieQQ&#39;s avatar">
+</a>
+</div>
+<div class="media-body">
+<div class="media-heading">
+<a href="https://forum.allaboutcircuits.com/userProfile.php?user=MaggieQQ" class="name"><b itemprop="name">MaggieQQ</b></a>
+<span class="date" itemprop="commentTime">2016-05-12</span>
+</div>
+<div class="article-comment" itemprop="commentText"><p>Yes,efficient work is based on good operating practices.<br>
+Your words with GIF pictures make this article very interesting.</p></div>
+<div class="meta">
+<a href="https://www.allaboutcircuits.com/technical-articles/eagle-cad-tips-and-tricks/#" class="reply" rel="1051">Reply</a>
+</div>
+</div>
+</li>
+<li class="media">
+<div class="pull-left commentAvatar">
+<a href="https://forum.allaboutcircuits.com/userProfile.php?user=imqqmi">
+<img src="./Easier PCB Design_ Eagle CAD Tips and Tricks_files/avatar(3).php" height="40px" width="40px" alt="imqqmi&#39;s avatar">
+</a>
+</div>
+<div class="media-body">
+<div class="media-heading">
+<a href="https://forum.allaboutcircuits.com/userProfile.php?user=imqqmi" class="name"><b itemprop="name">imqqmi</b></a>
+<span class="date" itemprop="commentTime">2016-05-15</span>
+</div>
+<div class="article-comment" itemprop="commentText"><p>One of the things that confused me a lot is a total lack of keyboard shortcuts. Luckily you can assign your own through the menu: Options/Assign. I don’t like using the command line (having to hit enter moving my hand across the keyboard and finding the right hand position again without looking is annoying) so I’ve setup the shortcuts that I use with Lightwave 3D, which are very easy to use if you’re used to them like ctrl+t for move/translate, ctrl+y (yaw) for rotate, ctrl+g (comes from illustrator) group, ctrl+j for junction, ctrl+a for adding components etc. <br>
+Schematic, board and component design each have separate assignments so it takes a little time to setup but it’s well worth it. <br>
+Even with these shortcut keys the controls are not very intuitive to use. Having to use ctrl+right (or was it alt?) click to move groups is awful if you’re used to adobe illustrator way of moving stuff around. </p>
+</div>
+<div class="meta">
+<a href="https://www.allaboutcircuits.com/technical-articles/eagle-cad-tips-and-tricks/#" class="reply" rel="1078">Reply</a>
+</div>
+</div>
+</li>
+<li class="media">
+<div class="pull-left commentAvatar">
+<a href="https://forum.allaboutcircuits.com/userProfile.php?user=acthomas">
+<img src="./Easier PCB Design_ Eagle CAD Tips and Tricks_files/avatar(4).php" height="40px" width="40px" alt="acthomas&#39;s avatar">
+</a>
+</div>
+<div class="media-body">
+<div class="media-heading">
+<a href="https://forum.allaboutcircuits.com/userProfile.php?user=acthomas" class="name"><b itemprop="name">acthomas</b></a>
+<span class="date" itemprop="commentTime">2017-05-05</span>
+</div>
+<div class="article-comment" itemprop="commentText"><p>good tips here.&nbsp; thanks!</p></div>
+<div class="meta">
+<a href="https://www.allaboutcircuits.com/technical-articles/eagle-cad-tips-and-tricks/#" class="reply" rel="3847">Reply</a>
+</div>
+</div>
+</li>
+</ul>
+<form id="reply-form" class="hidden well" method="post" action="https://www.allaboutcircuits.com/">
+<div class="hiddenFields">
+<input type="hidden" name="ACT" value="25">
+<input type="hidden" name="RET" value="https://www.allaboutcircuits.com/technical-articles/eagle-cad-tips-and-tricks">
+<input type="hidden" name="URI" value="technical-articles/eagle-cad-tips-and-tricks">
+<input type="hidden" name="entry_id" value="36406">
+<input type="hidden" name="parent_id" value="0">
+<input type="hidden" name="site_id" value="1">
+<input type="hidden" name="csrf_token" value="cc3c1a696ebc214d866e9249ef95abc0fbdd914e">
+</div>
+<div class="form-group clearfix">
+<textarea style="resize:vertical;" placeholder="Please login before you can reply to this comment." readonly="" name="comment" rows="2" class="form-control comment-comment"></textarea>
+<input type="button" disabled="true" id="submitComment" value="Submit" class="commentButton btn btn-theme pull-right" style="margin-top:5px;">
+</div></form>
+</div>
+<div class="clearfix">&nbsp;</div>
+</div>
+</div>
+</article>
+<div class="clearfix">&nbsp;</div>
+</div>
+<div class="col-lg-3 col-md-4 col-sm-5 col-xs-6 right-sidebar sidebar-offcanvas block-1" data-mh="block-1" style="height: 10773px;">
+<div id="stick_column" class="is_stuck" style="position: fixed; top: 50px; width: 328px;">
+<div class="widget ads sidepin leaderboard_ad">
+
+<div id="div-gpt-ad-1429623690593-0">
+<script type="text/javascript">
+			googletag.cmd.push(function() {googletag.display('div-gpt-ad-1429623690593-0');});
+		</script>
+</div>
+</div>
+<div class="widget recommended-articles">
+<div class="sidebar-recommended-articles">
+<div class="clearfix"></div>
+</div>
+<div class="clearfix"></div>
+</div>
+</div><div style="position: static; width: 328px; height: 40px; display: block; vertical-align: baseline; float: none;"></div>
+
+<div id="div-gpt-ad-1441294234226-0">
+<script type="text/javascript">
+googletag.cmd.push(function() {googletag.display('div-gpt-ad-1441294234226-0');});
+</script>
+</div>
+</div>
+</div> 
+</div> 
+</section>
+</main>
+<footer class="hidden-print">
+<div class="widgets-box">
+<div class="container">
+<div class="row">
+<div class="col-md-3 col-sm-4  col-xs-12 widget-item">
+<h4>WHO WE ARE</h4>
+<p>
+<a class="logo-link" href="https://www.allaboutcircuits.com/"><img class="navLogo" alt="All About Circuits" src="./Easier PCB Design_ Eagle CAD Tips and Tricks_files/aac_logo.png">
+</a>
+</p>
+<div class="description"> <a href="https://www.allaboutcircuits.com/contact-us/" class="see-more">More about us <i class="fa fa-arrow-right"></i></a>
+</div>
+<h4>Network Sites</h4>
+<div class="col-md-6 col-sm-12 footer-links">
+<ul class="list-unstyled">
+<li><a href="https://maker.pro/" target="_blank">Maker.Pro</a></li>
+<li><a href="https://www.mikrocontroller.net/" target="_blank">Mikrocontroller.net</a></li>
+</ul>
+</div>
+</div>
+<div class="col-md-3 col-sm-2 col-xs-6 widget-item">
+<h4>Content</h4>
+<div class="col-md-6 col-sm-12 footer-links">
+<ul class="list-unstyled">
+<li><a href="https://www.allaboutcircuits.com/bom/">BOM Tool</a></li>
+<li><a href="https://www.allaboutcircuits.com/tools/">Calculators</a></li>
+<li><a href="https://www.allaboutcircuits.com/electronic-components/manufacturer/">Datasheets</a></li>
+<li><a href="https://www.allaboutcircuits.com/electronic-components/" title="Electronic parts datasheets, prices &amp; stock">Electronic Components</a>
+</li><li><a href="https://forum.allaboutcircuits.com/">Forum</a></li>
+<li><a href="https://www.allaboutcircuits.com/giveaways/">Giveaways</a></li>
+<li><a href="https://www.allaboutcircuits.com/industry-articles/">Industry Articles</a></li>
+</ul>
+</div>
+<div class="col-md-6 col-sm-12 footer-links">
+<ul class="list-unstyled">
+<li><a href="https://www.allaboutcircuits.com/industry-webinars/">Industry Webinars</a></li>
+<li><a href="https://www.allaboutcircuits.com/news/">News</a></li>
+<li><a href="https://www.allaboutcircuits.com/projects/">Projects</a></li>
+<li><a href="https://www.allaboutcircuits.com/technical-articles/">Technical Articles</a></li>
+<li><a href="https://www.allaboutcircuits.com/test-measurement/">Test Equipment</a></li>
+<li><a href="https://www.allaboutcircuits.com/textbook/">Textbook</a></li>
+<li><a href="https://www.allaboutcircuits.com/video-lectures/">Video Lectures</a></li>
+<li><a href="https://www.allaboutcircuits.com/worksheets/">Worksheets</a></li>
+</ul>
+ </div>
+</div>
+<div class="col-md-3 col-sm-2 col-xs-6 widget-item">
+<h4>Categories</h4>
+<div class="col-md-6 col-sm-12 footer-links">
+<ul class="list-unstyled">
+<li><a href="https://www.allaboutcircuits.com/latest/">Latest</a></li>
+<li><a href="https://www.allaboutcircuits.com/latest/analog/">Analog</a></li>
+<li><a href="https://www.allaboutcircuits.com/projects/category/arduino/">Arduino Projects</a></li>
+<li><a href="https://www.allaboutcircuits.com/latest/automotive/">Automotive</a></li>
+<li><a href="https://www.allaboutcircuits.com/latest/connectors/">Connectors</a></li>
+<li><a href="https://www.allaboutcircuits.com/latest/digital-ics/">Digital ICs</a>
+</li><li><a href="https://www.allaboutcircuits.com/latest/eda/">EDA Tools</a></li>
+<li><a href="https://www.allaboutcircuits.com/latest/electromechanical/">Electromechanical </a></li>
+</ul>
+</div>
+<div class="col-md-6 col-sm-12 footer-links">
+<ul class="list-unstyled">
+<li><a href="https://www.allaboutcircuits.com/latest/embedded/">Embedded</a></li>
+<li><a href="https://www.allaboutcircuits.com/latest/iot/">IoT</a></li>
+<li><a href="https://www.allaboutcircuits.com/latest/pcb/">PCB</a></li>
+<li><a href="https://www.allaboutcircuits.com/latest/power/">Power</a></li>
+<li><a href="https://www.allaboutcircuits.com/latest/sensors/">Sensors</a></li>
+<li><a href="https://www.allaboutcircuits.com/latest/test-and-measurement/">Test &amp; Measurement</a></li>
+<li><a href="https://www.allaboutcircuits.com/latest/wearables/">Wearables</a></li>
+<li><a href="https://www.allaboutcircuits.com/latest/wireless-rf/">Wireless RF</a></li>
+</ul>
+</div>
+</div>
+<div class="col-md-3 col-sm-4 col-xs-12 widget-item social-widget-box">
+<div class="row">
+<h4>Connect with Us</h4>
+<div class="col-md-6 col-sm-6 col-xs-6 footer-links">
+<ul class="list-unstyled">
+<li><a href="https://www.facebook.com/allaboutcircuits" target="_blank">Facebook</a>
+</li>
+<li><a href="https://twitter.com/AllAboutCircuit" target="_blank">Twitter</a>
+</li>
+<li><a href="https://www.youtube.com/c/AllAboutCircuitsVideo" target="_blank">YouTube</a></li>
+<li><a href="https://www.linkedin.com/company/allaboutcircuits" target="_blank">LinkedIn</a></li>
+</ul>
+</div>
+<div class="col-md-6 col-sm-6 col-xs-6 footer-links">
+<ul class="list-unstyled">
+<li><a href="https://www.allaboutcircuits.com/contact-us/">Contact Us</a></li>
+<li><a href="https://www.allaboutcircuits.com/write-for-us/" onclick="ga(&#39;send&#39;,&#39;event&#39;,&#39;write-for-us&#39;,&#39;footer&#39;)">Write For Us</a></li>
+<li><a href="https://www.eetech.com/" target="_blank">Advertise</a></li>
+<li><a href="http://us8.campaign-archive1.com/home/?u=18656ef6df14c935d4d9192ee&amp;id=2565529c4b">Newsletters</a></li>
+</ul>
+</div>
+</div>
+<div class="clearfix visible-sm visible-xs">&nbsp;</div>
+<div class="row">
+<h4>Sign Up</h4>
+<div class="newsletter-box">
+<form class="form-inline" role="form">
+<div class="input-group">
+<input type="text" id="signupemail" class="form-control" placeholder="Enter your email address">
+<div class="input-group-btn">
+<button type="button" class="btn" onclick="window.location.href=&#39;//forum.allaboutcircuits.com/register?email=&#39;+$(&#39;#signupemail&#39;).val();">Register</button>
+</div>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="copyright-box">
+<div class="container">
+<div class="row">
+<div class="col-md-6 col-sm-6 col-xs-12">
+<p>© <a href="https://eetech.com/" target="_blank">EETech Media, LLC</a>. All rights reserved</p>
+</div>
+<div class="col-md-6 col-sm-6 hidden-xs">
+<a href="https://www.allaboutcircuits.com/privacy-policy/">Privacy Policy</a> · <a href="https://forum.allaboutcircuits.com/help/terms">Terms of Service</a> · <a href="https://www.allaboutcircuits.com/user-agreement/">User Agreement</a>
+<div class="back-to-top pull-right sm-hidden"><img src="./Easier PCB Design_ Eagle CAD Tips and Tricks_files/btn-scrollUp.png">
+</div>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<script src="./Easier PCB Design_ Eagle CAD Tips and Tricks_files/jquery.mobile.custom.min.js"></script>
+<script src="./Easier PCB Design_ Eagle CAD Tips and Tricks_files/bootstrap.min.js"></script>
+<script src="./Easier PCB Design_ Eagle CAD Tips and Tricks_files/modernizr.js"></script>
+<script src="./Easier PCB Design_ Eagle CAD Tips and Tricks_files/sticky-kit.min.js"></script>
+<script src="./Easier PCB Design_ Eagle CAD Tips and Tricks_files/jquery.matchHeight.js"></script>
+<script src="./Easier PCB Design_ Eagle CAD Tips and Tricks_files/jquery.hoverIntent.min.js"></script>
+<script src="./Easier PCB Design_ Eagle CAD Tips and Tricks_files/bootstrap-notify.min.js"></script>
+<script src="./Easier PCB Design_ Eagle CAD Tips and Tricks_files/main.js"></script>
+<script src="./Easier PCB Design_ Eagle CAD Tips and Tricks_files/menu.js"></script>
+<script src="./Easier PCB Design_ Eagle CAD Tips and Tricks_files/highlight.pack.js"></script>
+<script src="./Easier PCB Design_ Eagle CAD Tips and Tricks_files/MathJax.js" id=""></script>
+<script type="text/javascript" src="./Easier PCB Design_ Eagle CAD Tips and Tricks_files/jquery.dotdotdot.js"></script>
+<script type="text/javascript" src="./Easier PCB Design_ Eagle CAD Tips and Tricks_files/articles.js"></script>
+
+<div id="div-gpt-ad-1430235245447-0" class="wallpaperadpixel">
+<script type="text/javascript">
+		googletag.cmd.push(function() {googletag.display('div-gpt-ad-1430235245447-0');});
+	</script>
+</div>
+
+
+
+<div id="my_popup_background" class="popup_background" style="opacity: 0; visibility: hidden; background-color: white; position: fixed; top: 0px; right: 0px; bottom: 0px; left: 0px; z-index: 100000; transition: 0.3s;"></div><div id="my_popup_wrapper" class="popup_wrapper" style="opacity: 0; visibility: hidden; position: fixed; overflow: auto; z-index: 100001; transition: 0.3s; width: 100%; height: 100%; top: 0px; left: 0px; text-align: center; display: none;"><div class="hidden popup_content" id="my_popup" data-popup-initialized="true" aria-hidden="true" role="dialog" style="opacity: 0; visibility: hidden; display: inline-block; outline: none; transition: 0.3s; text-align: left; position: relative; vertical-align: middle;">
+<div id="welcome-ad">
+<div class="background-image"><img src="./Easier PCB Design_ Eagle CAD Tips and Tricks_files/bg.jpg" alt=""></div>
+<div class="welcome-ad-container">
+<div class="container-fluid">
+<div class="row ad-header">
+<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12"><img src="./Easier PCB Design_ Eagle CAD Tips and Tricks_files/logo.png" alt="All About Circuits Logo"></div>
+<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12"><span class="my_popup_close continue-site">Continue to site</span></div>
+</div>
+<div class="row">
+<div class="col-lg-5 col-md-8 col-sm-12 col-xs-12 hidden-xs hidden-sm hidden-md">
+<div class="quote">
+<h2>Quote of <span>the day</span></h2>
+<p class="text"><span class="start-quote">“</span><span id="welcomequote"></span><span>”</span></p>
+<div class="author">- <span id="welcomeauthor"></span></div>
+</div>
+</div>
+<div class="col-lg-7 col-md-12 col-sm-12 col-xs-12" style="text-align: center;">
+<div id="div-gpt-ad-1430160889889-0"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="popup_align" style="display: inline-block; vertical-align: middle; height: 100%;"></div></div></body></html>

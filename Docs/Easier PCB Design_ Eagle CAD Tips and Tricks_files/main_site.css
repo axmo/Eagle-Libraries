@@ -1,0 +1,8 @@
+html,
+body {
+    position: relative;
+    width: auto !important;
+    overflow-x: hidden !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}

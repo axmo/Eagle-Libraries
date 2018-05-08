@@ -10,3 +10,4 @@ LO R976-PS-1	OSRAM Opto Semiconductors Inc.	DK	475-2488-2-ND		0805 (2012 Metric)
 B2B-PH-K-S(LF)(SN)	JST Sales America Inc.	DK	455-1704-ND		None
 S2B-PH-K-S(LF)(SN)	JST Sales America Inc.	DK	455-1719-ND		None
 B2B-PH-K-S(LF)(SN)	JST Sales America Inc.	DK	455-1704-ND		None
+B2B-PH-K-S(LF)(SN)	JST Sales America Inc.	DK	455-1704-ND		None
