@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.0.0">
+<eagle version="9.0.1">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -160,7 +160,7 @@
 <wire x1="26.02" y1="5.24" x2="24.02" y2="5.24" width="0.6096" layer="21"/>
 <text x="12.7" y="0" size="1.778" layer="21">ESP32</text>
 </package>
-<package name="COVER24X8LEDMATRIX">
+<package name="COVER-24X8-LED-MATRIX-">
 <description>&lt;b&gt;Cover 24x8 LED Matrix&lt;/b&gt;&lt;br&gt;</description>
 <pad name="1" x="25.4" y="12.7" drill="1.11" diameter="1.665" shape="square"/>
 <pad name="2" x="22.86" y="12.7" drill="1.11" diameter="1.665"/>
@@ -519,7 +519,7 @@ Source: &lt;a href="https://github.com/Robert-MARKII/Document/blob/master/FireBe
 <gate name="G$1" symbol="DFR0484" x="-15.24" y="27.94"/>
 </gates>
 <devices>
-<device name="" package="COVER24X8LEDMATRIX">
+<device name="" package="COVER-24X8-LED-MATRIX-">
 <connects>
 <connect gate="G$1" pin="GND" pad="15"/>
 <connect gate="G$1" pin="IO6/CLK" pad="11"/>
@@ -529,7 +529,28 @@ Source: &lt;a href="https://github.com/Robert-MARKII/Document/blob/master/FireBe
 </connects>
 <technologies>
 <technology name="">
-<attribute name="COLOR" value="white" constant="no"/>
+<attribute name="COLOR" value="WHITE" constant="no"/>
+<attribute name="MPN" value="DFR0484" constant="no"/>
+</technology>
+<technology name="COVERBLUE">
+<attribute name="COLOR" value="BLUE" constant="no"/>
+<attribute name="MPN" value="DFR0485" constant="no"/>
+</technology>
+<technology name="COVERGREEN">
+<attribute name="COLOR" value="GREEN" constant="no"/>
+<attribute name="MPN" value="DFR0468" constant="no"/>
+</technology>
+<technology name="COVERRED">
+<attribute name="COLOR" value="RED" constant="no"/>
+<attribute name="MPN" value="DFR0488" constant="no"/>
+</technology>
+<technology name="COVERWHITE">
+<attribute name="COLOR" value="WHITE" constant="no"/>
+<attribute name="MPN" value="DFR0484" constant="no"/>
+</technology>
+<technology name="COVERYELLOW">
+<attribute name="COLOR" value="YELLOW" constant="no"/>
+<attribute name="MPN" value="DFR0487" constant="no"/>
 </technology>
 </technologies>
 </device>
